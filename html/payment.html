@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>小野水產</title>
+        <link rel="icon" href="../img/homepage/icon4_light.ico">
+            <!--CSS-->
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/payment.css">
+            <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+            <!--'Noto Serif JP', serif、'Noto Serif TC', serif;-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+            <!--導覽列英文字體 'Source Serif Pro', serif-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">   
+            <!--數字字體 Lora:ital,wght@0,400;0,500;1,500-->
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet"> 
+            <!--文章標題 'Noto Sans JP', sans-serif; 400 500 700 900-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+            <!--文章內文 'Roboto', sans-serif 100 300 400-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+            <!--首頁 Font Awsome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="">
+        <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script>     
+    </head>
+    <body>
+        <header>
+            <!--LOGO-->
+            <a href="../index.html"><img class="logo" src="../img/icon-logo.svg" alt="LOGO"></a>
+            <div>
+                <!--主選單-->
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">首頁</a></li>
+                        <li><a href="./news.html">最新消息</a></li>
+                        <li><a href="./subscribe.html">訂閱方案</a></li>
+                        <li><a href="html/merchandise.html">精選商品</a></li>
+                        <li><a class="en" href="#">Q&A</a></li>
+                    </ul>
+                </nav>                                  
+                <!--會員專區-->
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-magnifying-glass fa-lg"></i></li>
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li><a href="./log-in.html">登入</a></li>
+                        <li><a href="./register.html">註冊</a></li>
+                    </ul>
+                </nav>
+            </div>        
+        </header>
+    
+        <!-----內容----->
+
+        <main>
+            <h1>訂單確認</h1>
+
+            <!--商品明細-->
+            <ul class="card1">
+                <li>
+                    <img src="../img/payment/fish.jpg" alt="商品照片">
+                </li>
+
+                <li>
+                    <ul class="wrapper">
+                        <li>
+                            <h2>野生鱸魚<span class="num">(200g)</span></h2>
+                        </li>
+                        <!--商品介紹-->
+                        <li>
+                            <h3 class="intro">來自太平洋海域，肉質細緻鮮美
+                                <br>
+                                適合煮魚湯品嘗鮮甜味 </h3>
+                        </li>
+                        <!--統計購買數量-->
+                        <li>
+                            <h3>數量：</h3>
+                        </li>                        
+                        <li>
+                            <ul class="amount">
+                                <!--購買數量-->
+                                <li>                                    
+                                    <ul>
+                                        <li><a href="#"><i class="fa-solid fa-minus"></i></a></li>
+                                        <li><div class="number">1</div></li>
+                                        <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                                    </ul>  
+                                </li>
+                                <!--單價-->
+                                <li>                                    
+                                    <h3>
+                                        <span class="en"> NT$</span>    
+                                        <span class="num">399/</span>
+                                        份
+                                    </h3>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--總價-->                        
+                        <li class="total-cum">
+                            <h3>總計：</h3>
+                            <h3><span class="en">NT$</span><span class="num">399</span></h3>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!--購買人資訊、金流-->
+            <ul class="card2">
+                <!--購買人資訊-->
+                <li>
+                    <ul class="wrapper2">
+                        <h2 class="wra-title">購買人資訊</h2>
+
+                        <h3>收件人<span class="must">*</span>：</h3>
+                        <input type="text" placeholder="請輸入收件人姓名">
+                        <h4 class="alert">格式錯誤</h4>
+
+                        <h3>手機<span class="must">*</span>：</h3>
+                        <input type="text" placeholder="請輸入聯絡電話">
+                        <h4 class="alert">格式錯誤</h4>
+
+                        <h3>電子信箱<span class="must">*</span>：</h3>
+                        <input type="text" placeholder="請輸入您的電子信箱">
+                        <h4 class="alert">格式錯誤</h4>
+
+                        <h3>郵寄地址<span class="must">*</span>：</h3>
+                        <ul class="address">
+                            <li>
+                                <input type="text" placeholder="郵遞區號">
+                            </li>
+                            <li>
+                                <input type="text" placeholder="縣市">
+                            </li>
+                            <li>
+                                <input type="text" placeholder="鄉鎮市區">
+                            </li>
+                            <li>
+                                <input type="text" placeholder="門牌號碼與街道名稱">
+                            </li>
+                        </ul>                        
+                        <h4 class="alert">格式錯誤</h4>
+                    </ul>                    
+                </li>
+
+                <!--付款資訊-->
+                <li>
+                    <ul class="wrapper3" >
+                        <h2 class="wra-title">付款資訊</h2>
+                        <h3>付款方式：</h3>
+                        <!--linepay付款--> 
+                        <li class="linepay" >
+                            <input class="radio1" type="radio" name="pay" style="zoom:1.5">
+                            <img class="icon-linepay" src="../img/payment/icon-line pay.png" alt="linepay">                           
+                        </li>
+                        <img class="qrcode" src="../img/payment/qrcode.svg" alt="QRcode" style="display: none;">
+                        <!--信用卡付款--> 
+                        <li class="visa">
+                            <input class="radio2" type="radio" name="pay" style="zoom:1.5">
+                            <img class="icon-visa" src="../img/payment/icon-visa.png" alt="visa"> 
+                            <h3>信用卡付款</h3>                           
+                        </li>          
+                        <!--信用卡資料-->                                 
+                        <ul class="visa-detail" style="display:none;">
+                            <!--信用卡號-->
+                            <li>
+                                <h3>信用卡卡號：</h3>
+                                <div class="visa-number">
+                                    <input type="text" placeholder="0000">
+                                    <input type="text" placeholder="0000">
+                                    <input type="text" placeholder="0000">
+                                    <input type="text" placeholder="0000">
+                                </div>                                                                    
+                            </li>
+                             <!--有效日期-->
+                            <li>                                 
+                                <h3>有效日期：</h3>
+                                <input class="visa-date" type="text" placeholder="00/00">                                   
+                            </li>
+                            <!--安全碼-->
+                            <li>       
+                                <h3>安全碼：</h3>
+                                <input class="visa-code" type="text" placeholder="000">                            
+                            </li>
+                        </ul>     
+                    </ul>                    
+                </li>
+
+                 <!--送出資料-->
+                 <button class="submit">確定付款</button>
+            </ul>
+
+            <!--提示訊息-->
+            <div class="messa" style="display:none;">
+                <h3>付款成功</h3>
+
+                <div class="container">
+                    <button class="text-join">
+                        <a href="./register.html"><h3>加入會員 領取100元優惠券</h3></a>
+                    </button>
+                    <button>
+                        <a href="../index.html"><h3>回到首頁</h3></a>
+                    </button> 
+                </div>                        
+            </div>
+            
+        </main>
+        
+        <!-----頁尾----->
+        <footer>        
+            <ul>
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./subscribe.html">訂閱方案</a></li>
+                <li><a href="html/merchandise.html">精選商品</a></li>
+                <li><a class="en" href="#">Q&A</a></li>
+                <li><i class="fa-brands fa-facebook-square"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-line"></i></li>
+            </ul>
+                <!--社群連結-->
+            <ul>
+                <h3>連絡電話：(03)26810270</h3>
+                <h3>實體門市：(200)基隆市仁愛區孝一路</h3>
+                <small>&copy;本網站為緯育TibaMe前端設計工程師班第78期學員專題作品，本平台僅供學習、展示之用。 </small>
+                <a href="./html/reference.html"><h3>參考資料</h3></a>
+            </ul>   
+        </footer>
+
+        <script src="../js/payment.js"></script>
+    </body>
+    </html>

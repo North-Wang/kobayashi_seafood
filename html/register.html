@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>小野水產</title>
+        <link rel="icon" href="../img/homepage/icon4_light.ico">
+            <!--CSS-->
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/register.css">
+            <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+            <!--'Noto Serif JP', serif、'Noto Serif TC', serif;-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+            <!--導覽列英文字體 'Source Serif Pro', serif-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">   
+            <!--數字字體 Lora:ital,wght@0,400;0,500;1,500-->
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet"> 
+            <!--文章標題 'Noto Sans JP', sans-serif; 400 500 700 900-->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+            <!--文章內文 'Roboto', sans-serif 100 300 400-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+            <!--首頁 Font Awsome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="">
+        <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script>     
+    </head>
+    <body>
+        <header>
+            <!--LOGO-->
+            <a href="../index.html"><img class="logo" src="../img/icon-logo.svg" alt="LOGO"></a>
+            <div>
+                <!--主選單-->
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">首頁</a></li>
+                        <li><a href="./news.html">最新消息</a></li>
+                        <li><a href="./subscribe.html">訂閱方案</a></li>
+                        <li><a href="html/merchandise.html">精選商品</a></li>
+                        <li><a class="en" href="#">Q&A</a></li>
+                    </ul>
+                </nav>                                  
+                <!--會員專區-->
+                <nav>
+                    <ul>
+                        <li><i class="fa-solid fa-magnifying-glass fa-lg"></i></li>
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li><a href="./log-in.html">登入</a></li>
+                        <li><a href="./register.html">註冊</a></li>
+                    </ul>
+                </nav>
+            </div>        
+        </header>
+    
+        <!-----內容----->
+
+        <main>
+           <h1>註冊會員</h1>
+
+           <div class="card">
+             <ul class="wrapper">
+                <li>
+                    <h3>姓名：<span class="must">*</span></h3>
+                    <input type="text" placeholder="請輸入您的姓名">
+                    <h4 class="alert">格式輸入錯誤</h4>
+                </li>
+                <li>
+                    <h3>電子信箱：<span class="must">*</span></h3>
+                    <input type="text" placeholder="請輸入您的電子信箱">
+                    <h4 class="alert">信箱格式不符</h4>
+                </li>
+                <li>
+                    <h3>手機：<span class="must">*</span></h3>
+                    <input type="text" placeholder="請輸入您的手機號碼">
+                    <h4 class="alert">手機格式輸入錯誤</h4>
+                </li>
+                <li>
+                    <h3>簡訊驗證碼：<span class="must">*</span></h3>
+                    <input type="text" placeholder="請輸入驗證碼">
+                    <h4 class="alert">驗證碼錯誤</h4>
+                </li>
+                <li>
+                    <h3>設定密碼：<span class="must">*</span></h3>
+                    <input type="text" placeholder="請輸入由6~12個英文或數字組成的密碼">
+                    <h4 class="alert">格式錯誤</h4>
+                    <h4 class="alert password-wrong">密碼已被使用</h4>
+                </li>
+                <li>
+                    <h3>密碼確認：<span class="must">*</span></h3>
+                    <input type="password" placeholder="請再次輸入密碼">
+                    <h4 class="alert">密碼不符</h4>
+                </li>
+                <li>
+                    <h3>生日與性別：<span class="must">*</span></h3>
+                    <div class="birth">
+                        <input type="text" placeholder="西元年">
+                        <input type="text" placeholder="月份">
+                        <input type="text" placeholder="日期">
+                    </div>
+    
+                    <div class="sex">
+                        <input type="radio" name="sexual" style="zoom:1.5"><h3>男性</h3> 
+                        <input type="radio" name="sexual" style="zoom:1.5"><h3>女性</h3> 
+                        <input type="radio" name="sexual" style="zoom:1.5"><h3>其他</h3> 
+                    </li>
+                </li>
+              </ul>
+            
+              <!--送出-->
+              <button class="submit">送出</button>
+            
+                <div class="sub">
+                    <input  type="radio" style="zoom:1.5">
+                        <h3>我願意訂閱小野水產<br>
+                        <span class="alert-im">電子報</span>以獲得最新活動及優惠活動，並已了解及同意<span class="alert-im">使用條款</span>聲明
+                    </h3> 
+                </div>            
+            </div>
+
+             <!--提示訊息-->
+             <div class="messa" style="display:none;">
+                <h3>成功註冊</h3>
+
+                <div class="container">                    
+                    <button>
+                        <a href="../index.html"><h3>回到首頁</h3></a>
+                    </button> 
+                </div>                        
+             </div>
+
+        </main>
+        
+        <!-----頁尾----->
+        <footer>        
+            <ul>
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./subscribe.html">訂閱方案</a></li>
+                <li><a href="html/merchandise.html">精選商品</a></li>
+                <li><a class="en" href="#">Q&A</a></li>
+                <li><i class="fa-brands fa-facebook-square"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-line"></i></li>
+            </ul>
+                <!--社群連結-->
+            <ul>
+                <h3>連絡電話：(03)26810270</h3>
+                <h3>實體門市：(200)基隆市仁愛區孝一路</h3>
+                <small>&copy;本網站為緯育TibaMe前端設計工程師班第78期學員專題作品，本平台僅供學習、展示之用。 </small>
+                <a href="./html/reference.html"><h3>參考資料</h3></a>
+            </ul>   
+        </footer>
+
+        <script src="../js/register.js"></script>
+    </body>
+    </html>
