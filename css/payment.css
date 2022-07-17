@@ -1,0 +1,553 @@
+/*-----分頁共同的設定------*/
+
+main>h1{ /*分頁標題*/
+    display: block;
+
+    font-size: 34px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 600;
+
+    margin: 50px auto;
+}
+
+main h2 { /*副標題、商品名稱*/
+    font-size: 28px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+main h3 { /*內文*/
+    font-size: 18px;
+    font-family:'Noto Sans JP';
+    letter-spacing:3px; /*微調。字距*/
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+} 
+
+.wra-title{ /*h2標題文字*/
+    margin-top: 40px;
+
+    display: block;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+main .num { /*內文的數字字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main .en{ /*內文的英文字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main h4{ /*警告訊息 專用*/
+    font-size: 16px;
+    color: #E54343;
+}
+
+.alert{ /*關閉警告訊息*/
+    display: none;
+}
+
+.must{ /*資料必填符號*/
+    color: red;
+}
+
+input:focus { /*統一 表單focus*/
+    background-color: rgb(231, 231, 231);
+    border: 0.1px solid gray;
+}
+
+/*----------統一設定----------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #C2D6F1;
+
+    padding-bottom: 150px; /*與頁尾的距離*/
+}
+
+/*----------card1 商品明細---------*/
+.card1{
+    display: flex;
+
+    width: 1000px; /*card1寬度*/
+    height: 480px;
+
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+    overflow: hidden; /*裁切照片多餘的部分*/
+    
+    background-color: #D6EDFF;
+
+    margin-bottom: 50px; /*cards之間的距離*/
+}
+
+/*左側 商品照片*/
+
+.card1>li{ /*控制兩測的長寬*/
+    width: 50%;
+    height: 100%;
+}
+
+.card1 img{
+    display: block;
+    width: 100%;
+    height: 500px;
+    float: left;
+}
+
+/*右側 商品資訊*/
+.card1 li:last-child{
+    display: flex;
+    justify-content: center; /*讓右側文字 水平置中*/
+}
+.wrapper{ /*控制右側排版*/
+    width: 280px; 
+    height: 100%;
+    float: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper>li{
+    width: 100%; /*控制內文寬度。寬度跟隨.wrapper*/
+}
+
+/*商品名稱*/
+.wrapper h2{
+    margin-top: 40px;
+
+    display: block;
+    text-align: left;
+    font-weight: bold;
+
+    margin-bottom: 60px;
+}
+
+/*商品介紹*/
+.wrapper li:nth-of-type(2) h3{
+    text-align: left;
+
+    display: block;
+    max-height: 120px;
+    letter-spacing: normal;
+}
+
+/* "數量" */
+.wrapper li:nth-of-type(3) h3{
+    display: block;
+    text-align: left;
+
+    margin-top: 15px;
+    margin-bottom: 0px; /*和下方表單的距離*/
+}
+
+/*按鈕 購買數量*/
+.amount{
+    display: flex;
+    margin-bottom: 30px; /*與總價的距離*/
+}
+
+/* 加減的按鈕*/
+.amount li:first-child ul{
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 140px;
+
+    background-color: white;
+    border: .5px solid gray;
+    border-radius: 5px;
+}
+
+/*font awsome*/
+.amount .fa-solid{
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 100%; 
+    line-height: 45px;
+    color: #151D20;
+}
+
+/*減號*/
+.fa-minus {
+    float:left;
+}
+
+/*數字*/
+.number{
+    display: block;
+    width: 50px;
+    
+    font-size: 20px;
+    line-height: 45px; /*和.amount li:first-child ul height相同*/
+    text-align: center;
+}
+
+/*加號*/
+.fa-plus {
+    float:right;
+}
+
+/*單價*/
+.amount li:last-child h3{
+    margin-left: 20px;
+    line-height: 45px; /*和.amount li:first-child ul height相同*/
+
+    font-size: 20px;
+    font-weight: normal;
+}
+/*總計金額*/
+.total-cum{
+    display: flex;
+    align-items: center;
+    background-color: #5FBBFF;
+    border-radius: 1px;
+    padding: 14px 20px;
+    box-sizing:border-box;
+
+    margin-bottom: 40px; /*到card1底部的距離*/
+}
+
+/* "總價" */
+.total-cum h3:first-child {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+/*總價金額*/
+.total-cum h3:last-child {
+    display: block;
+    width: 100%;
+    text-align: right;
+    
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/*----------card2 購買人資訊、金流---------*/
+
+.card2 {
+    display: flex;
+    width: 1000px; /*card2寬度*/
+
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+    overflow: hidden; /*裁切多餘的部分*/
+
+    position: relative; /*送出按鈕 定位用*/
+}
+
+.card2>li{ /*控制兩測的長寬*/
+    width: 50%;
+
+    padding-bottom: 165px; /*到card2底部的距離*/
+} 
+
+/*-----購買人資訊-----*/
+.wrapper2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper2 h2{ /* "購買人資訊" */
+    margin-bottom: 25px;
+}
+
+.wrapper2 h3{ /*統一 表單標題文字*/
+    display: block;
+    width: 430px; /*和表單框格寬度相同*/
+    text-align: left;
+
+    margin-bottom: 10px;
+}
+
+.wrapper2 input,
+.wrapper3>input { /*統一 表單規格*/
+    width: 430px;    
+    height: 45px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+
+    padding-left: 10px; /*框格內文字padding lft*/
+    box-sizing: border-box; /*避免長寬爆掉*/
+    margin-bottom: 30px; /*有影響到地址的margin-bottom*/
+}
+
+/*-----付款資訊-----*/
+
+.card2>li:last-child {    
+    display: flex;
+    align-items: center;
+}
+.wrapper3{ /*右側排版*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+
+    margin-left: 50px;
+
+    background-image: url(rgba);
+}
+
+/*----地址-----*/
+.address{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 430px; /*和表單框格寬度相同*/
+}
+
+.address input{
+    margin-bottom: 10px; /*覆蓋原本margin-bottom設定*/
+}
+
+/*郵遞區號*/
+.address li:first-child input{
+    width: 110px;
+}
+
+/*縣市區*/
+.address li:nth-of-type(2) input,
+.address li:nth-of-type(3) input{
+    width: 140px;
+}
+
+/*道路地址*/
+.address li:last-child{
+    width: 100%;
+}
+
+/*不同付款管道*/
+.wrapper3 h2{ /* "付款資訊" */
+    margin-bottom: 25px; /*和"購買人資訊"相同*/
+}
+
+.wrapper3>h3{ /* "付款方式" */
+    display: block;
+    width: 100%;
+    text-align: left;
+
+    margin-bottom: 10px;  /*與表單的間距。同 左側表單標題文字margin-bottom*/
+}
+
+.wrapper3>li{
+    display: flex;
+}
+
+/*line pay*/
+.linepay{ /*linepay排版*/
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px; /*與visa的距離*/
+}
+.icon-linepay{
+    display: block;
+    height: 30px;
+}
+
+.qrcode{ /*QRcode*/
+    display: block;
+    width: 150px;
+    height: 150px;
+
+    margin-bottom: 20px; /*同.linepay margin-bpttom*/
+}
+
+/*信用卡*/
+.visa{ /*visa排版*/
+    display: flex;    
+    align-items: center;
+
+    margin-bottom: 20px; /*與信用卡資訊的距離*/
+}
+
+.icon-visa{
+    display: block;
+    height: 30px;
+}
+
+.visa>h3{ /* "信用卡付款"*/
+    margin-left: 15px;
+}
+
+/*-----信用卡資訊-----*/
+
+.visa-detail{ /*信用卡資訊整體的排版*/
+    margin-left: 30px; /*統一微調。和icon靠左對齊*/
+}
+
+.visa-detail h3{ /*信用卡資訊 子欄位標題*/
+    text-align: left;
+}
+
+.visa-detail>li{ /*統一 信用卡資訊子欄位 排版*/
+    margin-bottom: 20px;
+}
+
+/*信用卡卡號*/
+.visa-number{
+    display: flex;
+}
+
+.visa-number>input{ /*信用卡號 統一表單設定*/
+    width: 65px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+    text-align: center;
+
+    margin-right: 5px;
+}
+
+/*有效日期 表單*/
+.visa-date{
+    width: 65px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+    text-align: center;
+}
+
+/*安全碼 表單*/
+.visa-code{
+    width: 65px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+    text-align: center;
+}
+
+/*送出按鈕*/
+.submit{ /*設定和首頁的下訂按鈕相同*/
+    background-color: #5FBBFF;
+    width: 255px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px; /*清除預設邊框設定*/
+
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px; /*和height一樣*/
+    color: #151D20;
+    
+    font-weight: bold;
+    letter-spacing:10px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 45px;
+    margin: auto;
+
+    z-index: 1;
+}
+
+.submit:hover {
+    background-color:#1F5C89;
+    color:white;
+}
+
+/*-----完成後 提示訊息-----*/
+
+.messa{
+    width: 360px;
+    height: 205px;
+    background-color: #EEF5FF;
+
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    /* align-items: center;  */
+
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    z-index: 2;
+}
+
+.messa button { /*統一 按鈕設計*/
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0px; /*清除預設邊框設定*/
+
+    margin-bottom: 15px;
+    background-color: #E54343;
+
+}
+
+.messa>h3 { /* "付款成功" */
+    display: block;
+    width: 100%;
+
+    margin-top: 25px;
+    margin-bottom: 22px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*加入會員*/
+.text-join h3 {
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: white;
+}
+
+.text-join:hover  {
+    background-color: #96282C;
+}
+
+.text-join:hover h3 {
+    color: #151D20;
+}
+
+/*回到首頁*/
+.messa button:last-child {
+    background-color: #5FBBFF;
+}
+
+.messa button:last-child:hover {
+    background-color: #1F5C89;
+}
+
+.messa button:last-child:hover h3{
+    color: white;
+}

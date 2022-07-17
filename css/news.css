@@ -1,0 +1,212 @@
+/*-----分頁共同的設定------*/
+
+main>h1{ /*分頁標題*/
+    display: block;
+
+    font-size: 34px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 600;
+
+    margin: 50px auto;
+}
+
+main h2 { /*副標題、商品名稱*/
+    font-size: 28px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+main h3 { /*內文*/
+    font-size: 18px;
+    font-family:'Noto Sans JP';
+    letter-spacing:3px; /*微調。字距*/
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+} 
+
+.wra-title{ /*h2標題文字*/
+    margin-top: 40px;
+
+    display: block;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+main .num { /*內文的數字字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main .en{ /*內文的英文字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main h4{ /*警告訊息 專用*/
+    font-size: 16px;
+    color: #E54343;
+}
+
+.alert{ /*關閉警告訊息*/
+    display: none;
+}
+
+.must{ /*資料必填符號*/
+    color: red;
+}
+
+input:focus { /*統一 表單focus*/
+    background-color: rgb(231, 231, 231);
+    border: 0.1px solid gray;
+}
+
+/*----------統一設定----------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #C2D6F1;
+
+    padding-bottom: 150px; /*與頁尾的距離*/
+}
+
+/*-----頁碼-----*/
+.nav { 
+    width: 870px;
+    height: 16px;
+    line-height: 16px;
+    display: flex;
+    justify-content:flex-end; /*array位置*/
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px; /*和.wrapper距離*/
+    
+    position: relative;
+}
+
+.page-num { /*頁碼*/
+    display: flex;   
+    justify-content: center;
+    font-size: 16px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.page-num h3{ /*頁碼 間距*/
+
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+.page-num h3:nth-of-type(3) { /*現在在哪一頁?*/
+    font-weight: bold;
+}
+
+.page-num h3:hover i, /*頁碼 hover*/
+.page-num h3:hover a{
+    color: #E54343;
+}
+
+/*icon箭頭*/
+.fa-angle-left,
+.fa-angle-right {
+    font-size: 14px;
+}
+
+
+/*---排序方式-----*/
+.array{
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.array>h3 {
+    letter-spacing: normal;
+}
+
+.array form {
+    height: 16px;
+    margin-left: 5px;
+
+}
+.array option{ /*下拉選單*/
+    font-size: 16px;
+    
+}
+
+
+/*-----新聞-----*/
+
+.wrapper {
+    width: 930px; /*容器總寬*/
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.wrapper>li { /*統一 每則新聞的尺寸*/
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+    overflow: hidden; /*裁切照片多餘的部分*/
+
+    margin-bottom: 60px;
+}
+
+.wrapper>li:hover,
+.wrapper>li:hover section { /*新聞 hover*/
+    background-color: #1F5C89;
+}
+
+.wrapper img { /*統一 news封面照*/ 
+    width: 100%;
+    height: 270px; /*配合每則新聞寬度*/
+
+}
+
+.wrapper section{ /*統一 news內文 排版*/    
+    display: block;
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    background-color: #E4F1FC;
+}
+
+/*新聞標題*/
+.wrapper h2{
+    display: block;   
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    text-align: center;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+}
+
+/*新聞時間*/ 
+.wrapper h3{    
+    letter-spacing: 2px;
+    margin-bottom: 40px; /*到card底部的距離*/
+}

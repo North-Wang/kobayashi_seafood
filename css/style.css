@@ -1,0 +1,257 @@
+/*-----統一設定-----*/
+
+a{
+    text-decoration: none;
+    color: #151D20;
+}
+
+/*font awsome icon*/
+.fa-solid { /*font awsome icon 統一設定*/
+    font-size: 25px;
+}
+
+/*----------頁首----------*/
+
+/*統一設定*/
+header{
+    background-color:#151D20;
+    height: 160px;
+    font-size: 16px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: #EEF4FF;
+
+    display: flex;
+    justify-content: center;
+}
+
+/*英文字體*/
+header .en{
+    font-family:'Source Serif Pro', serif;
+    font-weight: 400;
+    letter-spacing:1px; /*微調。字距*/
+    margin-top: 4px; /*微調。和中文字體平行*/
+    background-color: rgb(39, 39, 14);
+}
+
+header>div{ 
+    width: 100%; /*左右導覽列的總寬*/
+}
+
+header a{
+    color: white;
+    font-size: 18px;
+    font-family:'Noto Serif JP';
+
+    display: flex;
+}
+
+header nav{
+   margin-top:85px; /*統一導覽列top間距*/
+}
+
+/*各別設定*/
+
+/*左側*/
+header nav:first-child {
+    float:left ;
+    max-width: 45%;
+
+    margin-left: 10px; /*到距離邊界距離*/
+}
+
+header nav:first-child ul{
+    display: flex;  
+}
+
+header nav:first-child li {
+    display: inline-block;
+    width: 100px; /*90+35px*/
+    height:55px ; /*30+25px*/
+
+    display: flex; /*文字水平垂直置中*/
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 5px;
+    margin-right: 20px;
+}
+
+
+header nav:first-child li:hover {
+    border-bottom: 2px solid #79ccdc;
+}
+
+header nav:first-child li:hover a {
+    color:#5FBBFF;
+}
+
+/*品牌logo*/
+header>a{ /*調整logo的位置*/
+    position: absolute;
+    margin: 15px auto;
+}
+header .logo{
+    width: 120px;
+
+    z-index: 1;
+}
+
+/*右側*/
+header nav:last-child {
+    float: right;
+    margin-right: 20px; /*到距離邊界距離*/
+}
+
+header nav:last-child ul {
+    display: flex;
+}
+
+header nav:last-child li {
+    display: inline-block;
+    width: 65px; 
+    height: 55px; /*和左側nav li相同*/
+
+    display: flex; /*文字水平垂直置中*/
+    justify-content: center; 
+    align-items: center; 
+}
+
+header nav:last-child li:nth-of-type(1),
+header nav:last-child li:nth-of-type(2) {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+header nav:last-child li:nth-of-type(3):hover,
+header nav:last-child li:nth-of-type(4):hover {
+    border-bottom: 2px solid #79ccdc;
+}
+
+
+header nav:last-child li:hover a {
+    color:#79ccdc;
+}
+
+/*font awsome icon*/
+
+header i:hover{
+    color:#79CCDC;
+}
+
+/*--------------------頁尾--------------------*/
+
+/*統一設定*/
+footer{
+    background-color: #151D20;
+    height: 240px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+    /* box-sizing: border-box; */
+}
+footer a {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+}
+
+
+/*-----各別設定-----*/
+
+/*導覽列*/
+footer ul:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-bottom: 50px;
+} 
+
+footer ul:first-child li{
+    height: 55px; /*和header 左側導覽列的li相同*/
+    line-height: 55px; /*和height相同*/
+
+    display: flex;
+    text-align: center;
+}
+
+footer ul:first-child a{
+    display: block;
+    font-size: 18px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    width: 120px; 
+
+    line-height: 55px; /*設為和li高度相同，擴大hover範圍*/
+
+    margin-bottom: 47px;
+}
+
+/*導覽列 英文字體*/
+footer .en{
+    font-family:'Source Serif Pro', serif;
+    font-weight: 400;
+    letter-spacing:1px; /*微調。字距*/
+}
+
+footer ul:first-child li:hover {
+    border-bottom: 2px solid #79ccdc; /*和header 左側導覽列的li相同*/
+}
+
+footer ul:first-child li:hover a {
+    color: #79ccdc;
+}
+
+/*font awsome*/
+
+.fa-brands{
+    font-size: 25px;
+    color: white;
+    margin: auto 0 ; /*上下置中 水平置中*/
+
+    text-align: center;
+}
+
+footer ul:first-child i{
+    width: 35px;
+}
+
+footer ul:first-child li:nth-of-type(5), 
+footer ul:first-child li:nth-of-type(6), 
+footer ul:first-child li:nth-of-type(7):hover{ /*清除hover的底線效果*/
+    border-bottom: 0;
+}
+
+footer ul:first-child i:hover {
+    color: #79ccdc;
+}
+
+/*相關資料*/
+footer ul:last-child {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+footer small,
+footer h3 {
+    font-size: 16px ;
+    text-align: center;
+    line-height: 1.6;
+}
+
+footer h3:first-child {
+    margin-bottom: 10px;
+}
+
+/*參考資料*/
+footer ul:last-child a:hover {
+    color:#79CCDC;
+}

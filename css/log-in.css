@@ -1,0 +1,309 @@
+/*-----分頁共同的設定------*/
+
+main>h1{ /*分頁標題*/
+    display: block;
+
+    font-size: 34px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 600;
+
+    margin: 50px auto;
+}
+
+main h2 { /*副標題、商品名稱*/
+    font-size: 28px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+main h3 { /*內文*/
+    font-size: 18px;
+    font-family:'Noto Sans JP';
+    letter-spacing:3px; /*微調。字距*/
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+} 
+
+.wra-title{ /*h2標題文字*/
+    margin-top: 40px;
+
+    display: block;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+main .num { /*內文的數字字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main .en{ /*內文的英文字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main h4{ /*警告訊息 專用*/
+    font-size: 16px;
+    color: #E54343;
+}
+
+.alert{ /*關閉警告訊息*/
+    display: none;
+}
+
+.alert-im{ 
+    color: #E64344;
+}
+
+.must{ /*資料必填符號*/
+    color: red;
+}
+
+input:focus { /*統一 表單focus*/
+    background-color: rgb(231, 231, 231);
+    border: 0.1px solid gray;
+}
+
+/*----------統一設定----------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #F1F3F2;
+
+    padding-bottom: 150px; /*與頁尾的距離*/
+}
+
+/*----------------------------*/
+
+.card {
+    width: 480px;
+
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+    overflow: hidden; /*裁切多餘的部分*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 25px;
+
+    position: relative; /*送出按鈕 定位用*/
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 76px;
+}
+
+.wrapper li{
+    width: 435px;
+}
+
+.wrapper input { /*統一 表單規格*/
+    width: 430px;    
+    height: 45px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+    
+    padding-left: 10px; /*框格內文字padding lft*/
+    box-sizing: border-box; /*避免長寬爆掉*/
+}
+
+.wrapper h3 { /*統一 各欄位名稱*/
+    display: block;
+    width: 100%;
+    text-align: left;
+
+    margin-bottom: 10px;
+}
+
+/*------社群媒體登入------*/
+
+.wrapper li:first-child button,
+.wrapper li:nth-of-type(2) button { /*統一 社群媒體按鈕*/
+    width: 430px;
+    height: 45px;    
+    border: 0px; /*清除預設邊框設定*/
+    border-radius: 5px;
+
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px; /*和height一樣*/
+    color: white;    
+    /* font-weight: bold; */
+    letter-spacing:2px;
+
+    margin-bottom: 20px;
+}
+
+.wrapper li:first-child button { /*臉書*/
+    background-color: #0573E7;
+}
+
+.wrapper li:nth-of-type(2) button { /*谷哥*/
+    background-color: #E54343;
+}
+
+.wrapper li:first-child button:hover {
+    background-color: #002d5c;
+}
+
+.wrapper li:nth-of-type(2) button:hover { /*谷哥*/
+    background-color: #96282C; 
+}
+
+/* "其他登入方式" */
+
+.wrapper li:nth-of-type(3) { 
+    /* margin-bottom: 20px;  */
+}
+
+.wrapper li:nth-of-type(3) h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*帳號密碼*/
+.wrapper li:nth-of-type(4) { /*帳號*/
+    margin-bottom: 30px;
+}
+
+.wrapper li:nth-of-type(5) input{ /*密碼 框格*/
+    margin-bottom: 5px;
+}
+
+/*忘記密碼?*/
+.text-forgt{ /* "忘記密碼" */
+    font-size: 16px;
+    color:#151D20 ;
+    text-align: left;
+    font-weight: bold;
+
+    margin-bottom: 40px;
+}
+
+/*-----按鈕 送出資料-----*/
+
+.log {
+    width: 430px; /*同 表單寬度*/
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.log button { /*送出按鈕尺寸*/
+    width: 205px;
+    height: 45px;
+    border-radius: 5px;
+    border: 0;
+
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: bold;
+    line-height: 45px; /*和height一樣*/
+}
+
+.log button:first-child {
+    background-color: #E54343;    
+}
+
+.log button:first-child a {
+    color: white;
+}
+
+.log button:last-child {
+    background-color: #5FBBFF;
+    color: #151D20;
+}
+
+.log button:first-child:hover {
+    background-color: #96282C;    
+}
+
+.log button:first-child:hover a {
+    color: #151D20;
+}
+
+.log button:last-child:hover {
+    background-color: #1F5C89;
+}
+
+.log button:last-child:hover a {    
+    color: white;
+}
+
+/*-----完成後 提示訊息-----*/
+
+.messa{
+    width: 360px;
+    height: 145px;
+    background-color: #EEF5FF;
+
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    z-index: 2;
+}
+
+.messa button { /*統一 按鈕設計*/
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0px; /*清除預設邊框設定*/
+}
+
+.messa>h3 { /* "付款成功" */
+    display: block;
+    width: 100%;
+
+    margin-top: 25px;
+    margin-bottom: 22px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*回到首頁*/
+.messa button:last-child {
+    background-color: #5FBBFF;
+}
+
+.messa button:last-child:hover {
+    background-color: #1F5C89;
+}
+
+.messa button:last-child:hover h3{
+    color: white;
+}

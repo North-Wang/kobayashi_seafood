@@ -1,0 +1,164 @@
+/*-----分頁共同的設定------*/
+
+main>h1{ /*分頁標題*/
+    display: block;
+
+    font-size: 34px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: #151D20;
+    text-align: center;
+    font-weight: 600;
+
+    margin: 50px auto;
+}
+
+main h2 { /*副標題、商品名稱*/
+    font-size: 28px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+main h3 { /*內文*/
+    font-size: 18px;
+    font-family:'Noto Sans JP';
+    letter-spacing:3px; /*微調。字距*/
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+} 
+
+.wra-title{ /*h2標題文字*/
+    margin-top: 40px;
+
+    display: block;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+main .num { /*內文的數字字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main .en{ /*內文的英文字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main h4{ /*警告訊息 專用*/
+    font-size: 16px;
+    color: #E54343;
+}
+
+.alert{ /*關閉警告訊息*/
+    display: none;
+}
+
+.must{ /*資料必填符號*/
+    color: red;
+}
+
+input:focus { /*統一 表單focus*/
+    background-color: rgb(231, 231, 231);
+    border: 0.1px solid gray;
+}
+
+/*----------統一設定----------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #C2D6F1;
+
+    padding-bottom: 150px; /*與頁尾的距離*/
+}
+
+/*----------------------------*/
+
+main>h3 {    
+    margin-bottom: 50px; /*到wrapper的距離*/
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 150px;
+}
+.wrapper>li { /*統一設定區塊尺寸*/
+    width: 360px;
+    height: 440px;
+    margin-left: 17.5px;
+    margin-right: 17.5px;
+
+    background-color: white;
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.wrapper h2 { /*方案 標題*/
+    margin-top: 60px;
+    font-weight: bold;
+    color: #151D20;
+}
+
+.wrapper h3 { /*適合人數*/
+    margin-top: 15px;
+    color: #151D20;
+}
+
+.wrapper h1 { /*價格*/
+    color: #d51f1f;
+    margin-top: 130px;
+    font-family: 'Noto Serif JP';
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.wrapper .num { /*方案 數字字體*/
+    color: #d51f1f;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.wrapper>li h3:last-child { /*了解更多*/
+    display: block;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    /* text-decoration: none; */
+    background-color: #5FBBFF;
+    color: #151D20;
+    
+    margin-bottom: 0;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.wrapper>li h3:last-child a{ /*了解更多*/
+    color: #151D20;
+}
+
+.wrapper>li h3:last-child:hover {
+    background-color: #1F5C89;
+}
+
+.wrapper>li h3:last-child:hover a {
+    color: white;
+}

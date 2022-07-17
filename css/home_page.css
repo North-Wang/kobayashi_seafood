@@ -1,0 +1,404 @@
+@media screen and (max-width:1920px) {
+    
+}
+
+/*-----統一設定-----*/
+main{
+    display: flex; /*換行 水平置中*/
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main h1{ /*各區塊主題文字*/
+    color: black;
+    font-weight:bold;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Noto Serif JP';
+    letter-spacing:10px; /*微調。字距*/
+}
+
+main h2{ /*最新消息 標題*/
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Noto Sans JP';
+    font-weight:700;
+    letter-spacing:1px; /*微調。字距*/
+}
+
+main h3{ /*最新消息 發文時間*/
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*----------今日漁獲----------*/
+
+/*標題*/
+.title-cover{ /*統一 調整上下留白空間*/
+        /*1920px*/
+    line-height: 80px; 
+        /*1280px*/
+    /* line-height: 60px; */
+}
+
+/*跑馬燈*/
+.cover{
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/*跑馬燈箭頭*/
+.arrow {
+    display: block;
+    min-width: 76rem; /*1280px 微調 兩邊箭頭距離*/
+    width: 78rem; /*1536px螢幕*/
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    position: absolute;
+    top: 50%; /*垂直置中*/
+    left:auto;
+    right:auto; 
+
+    z-index: 1;
+}
+
+.arrow i{
+    font-size: 30px;
+    width: 40px;
+    overflow: hidden;
+    color: #18264B;
+
+    opacity: 80%;
+}
+
+.arrow i:hover {
+    color: #050911;
+}
+
+/*-----今日漁獲照片-----*/
+.cover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden; /*剪裁兩邊照片超出的部分*/
+
+    position: relative;
+}
+
+.cover li{
+    margin: auto 10px;
+}
+/*魚類照片*/
+.cover-fish{
+    display: flex;
+    justify-content: center;
+}
+
+.cover-fish li{
+    position: relative; /*給魚類名稱定位用*/ 
+}
+.cover-fish  img{
+    display: block;
+        /*1920px*/
+    width: 600px; 
+    height: 400px; 
+        /*1280px*/
+    /* width: 752.5px; */
+    /* height: 350px; */
+}
+
+.cover-fish img:nth-of-type(2) {
+    margin: auto 10px; /*中央的魚類照片與兩旁的間距*/
+}
+
+/*統一魚類名稱的文字設定*/
+.fish-name{
+    font-family: 'Noto Serif JP', serif;
+    font-weight: normal;
+    font-size: 125px;
+    color: black;
+    text-shadow: 2px 2px 5px white;
+    /* -webkit-text-stroke:2px #fffbfb; 文字外框*/
+
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+
+    z-index: 8;
+
+}
+
+/*下訂按鈕*/
+.cover button{
+    background-color: #FF4348;
+    width: 255px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px; /*清除預設邊框設定*/    
+
+    font-weight: normal;
+    letter-spacing:10px;
+
+    position: absolute;
+    z-index: 2;
+
+    margin-top: 290px;
+}
+
+.cover button a{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px; /*和height相同*/
+}
+
+.cover button:hover {
+    background-color:#96282c;    
+
+    cursor: pointer; /*改變鼠標圖案*/
+}
+.cover button:hover a {
+    color:black;
+}
+
+
+/*倒數計時*/
+.countdown {
+    display: flex; /*文字與數字水平排列*/
+
+    line-height: 80px; /*統一 調整上下留白空間*/ 
+}
+
+.countdown h1:first-child{
+    margin-right: 20px; /*文字與時間 間距*/
+}
+
+/*倒數數字*/
+.type-number{
+    font-family: 'Lora', serif;
+    
+    letter-spacing: 0px; /*微調。字體間距*/
+}
+
+/*---------------最新消息---------------*/
+
+.news{
+    background-color:black ;
+    width: 100%;
+    height: 760px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*因為column效果，變成水平置中*/
+}
+
+/*標題文字*/
+.title-news{ 
+    color: white;
+
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+/*三則新聞的父層*/
+.news>div{ 
+    display: flex;
+}
+
+.news article{ /*統一 news文章*/
+    width: 270px; /*文章寬度*/
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 40px; /*左右margin*/
+
+    position: relative; /*控制遮罩位置*/   
+}
+
+/*新聞 遮罩*/
+.mask{ 
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+
+    position: absolute;
+    z-index: 2;
+}
+
+.mask:hover {
+    opacity: 0.4;
+
+}
+
+.news img { /*統一 news封面照*/ 
+    width: 100%;
+    height: 250px;
+}
+
+.news article section{ /*統一 news內文 排版*/
+    background-color: #5FBBFF;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*新聞時間*/ 
+.news h3{    
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+/*按鈕 more*/
+.news a{
+    display: block;
+    width: 255px; /*長寬圓角和立即下訂相同*/
+    height: 50px;
+    border-radius: 10px;
+    
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px; /*和height一樣*/
+    background-color: #1F5C89;
+    color: white;
+
+    margin-top: 40px;
+}
+
+.news a:hover {
+    background-color: #0a1f2e;
+    color: rgb(149, 149, 149);
+
+    cursor: pointer; /*改變鼠標圖案*/
+}
+
+/*----------視覺圖----------*/
+
+.cut_fish{
+    background-image: url(../img/homepage/bg-rock.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 675px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.cut_fish .wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position:relative;
+}
+
+.cut_fish h1{ /*視覺圖 標題*/
+    font-size: 30px;
+}
+
+.woodplate{ /*照片 木盤*/
+    display: block;
+    width: 450px;
+
+    padding-left: 55px; /*微調。視覺上水平置中*/
+}
+
+.cut_fish .fish{  /*照片 魚 父層*/
+    display: flex;
+    flex-direction: row;
+
+    /* margin: auto; */
+    margin-top: 0;
+    background-color: #1E2B58;
+    z-index: 10;
+
+    position: relative;
+    top: 0;
+}
+
+
+.cut_fish .fish img { /*照片 魚*/
+    display: block;
+    width: 500px;
+}
+
+.cut_fish .fish img:last-child {
+    position: absolute; /*左右黏合*/
+}
+
+/*----------品牌故事----------*/
+
+.story{
+    position: relative;
+    display: flex;
+}
+
+/*海浪圖*/
+.story>img{
+    display: block;
+    width: 50%;
+}
+
+.block-blue{
+    background-color: #1E2B58;
+    width:90px;
+    height:285px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    z-index: 1;
+}
+
+.block-white{
+    background-color: white;
+    width: 565px;
+    height: 225px;
+    box-shadow: 1px 1px 10px black ;
+
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 140px; /*微調。垂直置中*/
+
+    z-index: 2;
+}
+
+.block-white>div {
+    text-align: center;
+    padding: 30px;
+}
+
+ /*品牌故事 標題*/
+.block-white h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+ /*品牌故事 內容*/
+ .block-white h3 {
+    text-align: left;
+    width: 490px; /*控制多寬會換行*/
+    line-height: 1.6;
+ }
