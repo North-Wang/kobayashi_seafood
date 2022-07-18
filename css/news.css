@@ -162,6 +162,8 @@ main{
 
 .wrapper>li { /*統一 每則新聞的尺寸*/
     box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    width: 270px;
+    height: 470px;
     border-radius: 10px;
     overflow: hidden; /*裁切照片多餘的部分*/
 
