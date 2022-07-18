@@ -316,11 +316,13 @@ main h3{ /*最新消息 發文時間*/
 }
 
 .cut_fish h1{ /*視覺圖 標題*/
-    font-size: 40px;
+    /* font-size: 40px; */
+    font-size: 55px;
 
     position: absolute;
-    top: 50px;
-    
+    top: 40px;
+    /* top: 18px; */
+
     z-index: 1;
 }
 
@@ -354,8 +356,7 @@ main h3{ /*最新消息 發文時間*/
     position: absolute;
     top: 0;
     bottom: 0;
-    /* right: 0; */
-    left: 17%; /*微調 刀子位置*/
+    left:29%;  /*微調 刀子位置 1920px*/
     margin: auto;
 
     z-index: 2;
@@ -418,8 +419,7 @@ main h3{ /*最新消息 發文時間*/
 
     position: absolute;
     margin-left: 50%;
-    margin-top: 140px; /*微調。垂直置中*/
-    
+    margin-top: 200px; /* 1920px 有RWD*/    
 
     z-index: 2;
 }
@@ -446,6 +446,20 @@ main h3{ /*最新消息 發文時間*/
 
  @media screen and (max-width:1280px) {
     .block-white{
-        margin-top: 97px; /*1280px螢幕*/
+        margin-top: 96px; /*1280px螢幕*/
+    }
+
+    .knife{        
+        left: 17%; /*微調 刀子位置*/
+    }
+ }
+
+ @media screen and (max-width:1600px) {
+    .block-white{
+        margin-top: 147px; 
+    }
+
+    .knife{        
+        left: 24.5%; 
     }
  }

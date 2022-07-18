@@ -132,58 +132,12 @@ main{
     margin-bottom: 10px;
 }
 
-/*------社群媒體登入------*/
-
-.wrapper li:first-child button,
-.wrapper li:nth-of-type(2) button { /*統一 社群媒體按鈕*/
-    width: 430px;
-    height: 45px;    
-    border: 0px; /*清除預設邊框設定*/
-    border-radius: 5px;
-
-    font-size: 18px;
-    text-align: center;
-    line-height: 50px; /*和height一樣*/
-    color: white;    
-    /* font-weight: bold; */
-    letter-spacing:2px;
-
-    margin-bottom: 20px;
-}
-
-.wrapper li:first-child button { /*臉書*/
-    background-color: #0573E7;
-}
-
-.wrapper li:nth-of-type(2) button { /*谷哥*/
-    background-color: #E54343;
-}
-
-.wrapper li:first-child button:hover {
-    background-color: #002d5c;
-}
-
-.wrapper li:nth-of-type(2) button:hover { /*谷哥*/
-    background-color: #96282C; 
-}
-
-/* "其他登入方式" */
-
-.wrapper li:nth-of-type(3) { 
-    /* margin-bottom: 20px;  */
-}
-
-.wrapper li:nth-of-type(3) h3{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 /*帳號密碼*/
-.wrapper li:nth-of-type(4) { /*帳號*/
+.wrapper li:first-child { /*帳號*/
     margin-bottom: 30px;
 }
 
-.wrapper li:nth-of-type(5) input{ /*密碼 框格*/
+.wrapper li:nth-of-type(2) input{ /*密碼 框格*/
     margin-bottom: 5px;
 }
 
@@ -194,8 +148,72 @@ main{
     text-align: left;
     font-weight: bold;
 
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
+
+/* "其他登入方式" */
+.wrapper li:nth-of-type(3) {
+    position: relative; /*偽元素定位用*/
+}
+
+.wrapper li:nth-of-type(3)::before {  /*裝飾線*/
+    content:"";
+    width: 100px;
+    border-bottom: 1px solid #000;
+    top: 30%;
+    position: absolute;
+}
+
+.wrapper li:nth-of-type(3)::after {  /*裝飾線*/
+    content:"";
+    width: 100px;
+    border-bottom: 1px solid #000;
+    top: 30%;
+    right: 5px;
+    position: absolute;
+}
+
+.wrapper li:nth-of-type(3) h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*------社群媒體登入------*/
+
+.wrapper li:nth-of-type(4) button,
+.wrapper li:nth-of-type(5) button { /*統一 社群媒體按鈕*/
+    width: 430px;
+    height: 45px;    
+    border: 0px; /*清除預設邊框設定*/
+    border-radius: 5px;
+
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px; /*和height一樣*/
+    color: white;    
+    letter-spacing:2px;
+
+    margin-bottom: 20px;
+}
+
+.wrapper li:nth-of-type(4) button { /*臉書*/
+    background-color: #0573E7;
+}
+
+.wrapper li:nth-of-type(5) button { /*谷哥*/
+    background-color: #E54343;
+    margin-bottom: 40px; /*和送出按鈕的距離*/
+}
+
+.wrapper li:nth-of-type(4) button:hover {
+    background-color: #002d5c;
+}
+
+.wrapper li:nth-of-type(5) button:hover { /*谷哥*/
+    background-color: #96282C; 
+}
+
+
 
 /*-----按鈕 送出資料-----*/
 
@@ -244,7 +262,7 @@ main{
     background-color: #1F5C89;
 }
 
-.log button:last-child:hover a {    
+.log button:last-child:hover{    
     color: white;
 }
 

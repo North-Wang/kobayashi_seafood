@@ -116,7 +116,7 @@ main{
 .wrapper input { /*統一 表單規格*/
     width: 430px;    
     height: 45px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 5px;
     border: 0.1px solid gray;
     
@@ -131,6 +131,59 @@ main{
     text-align: left;
 
     margin-bottom: 10px;
+}
+
+/*手機 送出按鍵*/
+.wrapper li:nth-of-type(3) {
+    position: relative; /*送出按鍵 定位用*/
+} 
+
+.wrapper li:nth-of-type(3) button{
+    width: 130px;
+    height: 45px;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 18px;
+    /* font-weight: bold; */
+    letter-spacing: 2.5px;
+    background-color: #5FBBFF;
+
+    position: absolute;
+    right: 0;
+
+    z-index: 1;
+}
+
+.wrapper li:nth-of-type(3) button:hover {
+    background-color: #1F5C89;
+    color: white;
+}
+
+/*簡訊驗證碼 按鈕*/
+
+.wrapper li:nth-of-type(4) {
+    position: relative; /*送出按鍵 定位用*/
+} 
+
+.wrapper li:nth-of-type(4) button{
+    width: 130px;
+    height: 45px;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 18px;
+    /* font-weight: bold; */
+    letter-spacing: 2.5px;
+    background-color: #5FBBFF;
+
+    position: absolute;
+    right: 0;
+
+    z-index: 1;
+}
+
+.wrapper li:nth-of-type(4) button:hover {
+    background-color: #1F5C89;
+    color: white;
 }
 
 /*出生日期*/
