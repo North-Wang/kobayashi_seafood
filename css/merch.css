@@ -55,11 +55,6 @@ section img{
     position: absolute;
 }
 
-/* section h1:hover {
-    color:#5FBBFF;
-    transform: scale(1.2,1.2);
-} */
-
 .mask:hover{
     opacity: 0.2;
 }

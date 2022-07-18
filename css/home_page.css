@@ -258,8 +258,14 @@ main h3{ /*最新消息 發文時間*/
     flex-direction: column;
 }
 
-/*新聞時間*/ 
-.news h3{    
+/*每則新聞標題*/
+.news section h2{    
+    margin-top: 15px;
+    line-height: 0.5;
+}
+
+/*每則新聞的時間*/ 
+.news section h3{    
     margin-top: auto;
     margin-bottom: 20px;
 }
@@ -297,43 +303,62 @@ main h3{ /*最新消息 發文時間*/
 
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
 .cut_fish .wrapper{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     
-    position:relative;
+    position:relative; /*魚類圖片定位用*/
 }
 
 .cut_fish h1{ /*視覺圖 標題*/
-    font-size: 30px;
+    font-size: 40px;
+
+    position: absolute;
+    top: 50px;
+    
+    z-index: 1;
 }
 
 .woodplate{ /*照片 木盤*/
     display: block;
-    width: 450px;
+    width: 650px;
 
     padding-left: 55px; /*微調。視覺上水平置中*/
 }
 
-.cut_fish .wrapper .fish-all {
+/*全魚*/
+.cut_fish>.wrapper .fish-all {
     display: block;
-    width: 50px;
-    
+    height: 345px;   
 
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 5%;
     margin: auto;
 
-    z-index: 3;
+    z-index: 1;
+}
+
+/*刀子*/
+.knife{
+    display: block;
+    height: 437px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* right: 0; */
+    left: 17%; /*微調 刀子位置*/
+    margin: auto;
+
+    z-index: 2;
 }
 
 /* .cut_fish .fish{  照片 魚 父層
