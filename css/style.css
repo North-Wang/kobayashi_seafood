@@ -31,7 +31,6 @@ header .en{
     font-weight: 400;
     letter-spacing:1px; /*微調。字距*/
     margin-top: 4px; /*微調。和中文字體平行*/
-    background-color: rgb(39, 39, 14);
 }
 
 header>div{ 
