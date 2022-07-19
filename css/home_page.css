@@ -444,16 +444,6 @@ main h3{ /*最新消息 發文時間*/
 
  /*RWD*/ 
 
- @media screen and (max-width:1280px) {
-    .block-white{
-        margin-top: 96px; /*1280px螢幕*/
-    }
-
-    .knife{        
-        left: 17%; /*微調 刀子位置*/
-    }
- }
-
  @media screen and (max-width:1600px) {
     .block-white{
         margin-top: 147px; 
@@ -463,3 +453,15 @@ main h3{ /*最新消息 發文時間*/
         left: 24.5%; 
     }
  }
+
+ @media screen and (max-width:1280px) {
+    .block-white{
+        margin-top: 96px; /*1280px螢幕*/
+    }
+
+    .knife{        
+        left: 18%; /*微調 刀子位置*/
+    }
+ }
+
+ 
