@@ -456,10 +456,10 @@ main h3{ /*最新消息 發文時間*/
 
  @media screen and (max-width:1600px) {
     .block-white{
-        margin-top: 95px; 
+        margin-top: 148px; 
     }
 
     .knife{        
-        left: 18.5%; 
+        left: 24.5%; 
     }
  }
