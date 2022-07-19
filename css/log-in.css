@@ -80,6 +80,21 @@ main{
     background-color: #C2D6F1;
 
     padding-bottom: 150px; /*與頁尾的距離*/
+
+    position: relative;
+}
+
+    /*main遮罩*/
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+
+    position: absolute;
+    display: none;
+
+    z-index: 5;
 }
 
 /*----------------------------*/
@@ -288,7 +303,7 @@ main{
     left: 0;
     margin: auto;
 
-    z-index: 2;
+    z-index: 10;
 }
 
 .messa button { /*統一 按鈕設計*/

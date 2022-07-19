@@ -3,6 +3,7 @@ var cli_1 = document.querySelector(".radio1");
 var qrcode = document.querySelector(".qrcode");
 var cli_2 = document.querySelector(".radio2");
 var visa_detail = document.querySelector(".visa-detail");
+var mask0 = document.querySelector(".mask0");
 
 cli_1.addEventListener("click",function(){
     qrcode.style.display = "none";
@@ -25,10 +26,12 @@ cli_2.addEventListener("click",function(){
 /*付款成功 彈出訊息*/
 var submit = document.querySelector(".submit");
 var messa = document.querySelector(".messa");
+var mask0 = document.querySelector(".mask0");
 
 submit.addEventListener("click",function(){
     if (messa.style.display === "none"){
         messa.style.display = "block";
+        mask0.style.display = "block";
     }else{        
     }
 })
