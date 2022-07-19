@@ -442,7 +442,7 @@ main h3{ /*最新消息 發文時間*/
     line-height: 1.6;
  }
 
- /*RWD*/ 
+ /*RWD 螢幕寬度要由大到小*/ 
 
  @media screen and (max-width:1600px) {
     .block-white{
