@@ -52,18 +52,18 @@ header nav{
 /*各別設定*/
 
 /*左側*/
-header nav:first-child {
+.nav-l {
     float:left ;
     max-width: 45%;
 
     margin-left: 10px; /*到距離邊界距離*/
 }
 
-header nav:first-child ul{
+.nav-l ul{
     display: flex;  
 }
 
-header nav:first-child li {
+.nav-l li {
     display: inline-block;
     width: 100px; /*90+35px*/
     height:55px ; /*30+25px*/
@@ -77,11 +77,11 @@ header nav:first-child li {
 }
 
 
-header nav:first-child li:hover {
+.nav-l li:hover {
     border-bottom: 2px solid #79ccdc;
 }
 
-header nav:first-child li:hover a {
+.nav-l li:hover a {
     color:#5FBBFF;
 }
 
@@ -97,16 +97,16 @@ header .logo{
 }
 
 /*右側*/
-header nav:last-child {
+.nav-r {
     float: right;
     margin-right: 20px; /*到距離邊界距離*/
 }
 
-header nav:last-child ul {
+.nav-r ul {
     display: flex;
 }
 
-header nav:last-child li {
+.nav-r li {
     display: inline-block;
     width: 65px; 
     height: 55px; /*和左側nav li相同*/
@@ -116,19 +116,45 @@ header nav:last-child li {
     align-items: center; 
 }
 
-header nav:last-child li:nth-of-type(1),
-header nav:last-child li:nth-of-type(2) {
+.nav-r li:nth-child(-n+2) {
     padding-left: 0px;
     padding-right: 0px;
 }
 
-header nav:last-child li:nth-of-type(3):hover,
-header nav:last-child li:nth-of-type(4):hover {
+/*搜尋列*/
+.nav-r li:first-child {
+    width: 90px;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+/*搜尋列 底線*/
+.nav-r>ul li:first-child::before {
+    content: "";
+    width: 0px; /*線條寬度*/
+    height: 1.8px;
+    margin-bottom: -57.5px;
+    margin-right: -25px;
+    background-color: #79ccdc;
+
+    transition: .5s;
+}
+
+.nav-r>ul li:first-child:hover::before {
+    content: "";
+    width: 250px;
+}
+
+.nav-r>ul li:first-child:hover i {
+    color:#79ccdc;
+}
+
+/*登入 註冊*/
+.nav-r li:nth-child(n+2):hover {
     border-bottom: 2px solid #79ccdc;
 }
 
-
-header nav:last-child li:hover a {
+.nav-r li:hover a {
     color:#79ccdc;
 }
 
@@ -219,13 +245,13 @@ footer ul:first-child li:hover a {
 
 footer ul:first-child i{
     width: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-footer ul:first-child li:nth-of-type(5), 
-footer ul:first-child li:nth-of-type(6), 
-footer ul:first-child li:nth-of-type(7):hover{ /*清除hover的底線效果*/
+/* footer ul:first-child li:nth-child(n+3){ 清除社群媒體的hover底線效果
     border-bottom: 0;
-}
+}  */
 
 footer ul:first-child i:hover {
     color: #79ccdc;

@@ -93,8 +93,6 @@ main>h3 {
 .wrapper>li { /*統一設定區塊尺寸*/
     width: 360px;
     height: 440px;
-    margin-left: 17.5px;
-    margin-right: 17.5px;
 
     background-color: white;
     box-shadow: 1px 1px 10px rgb(135, 135, 135);
@@ -103,28 +101,23 @@ main>h3 {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
+    margin-left: 17.5px;
+    margin-right: 17.5px;
 
     position: relative;
 }
 
-.wrapper h2 { /*方案 標題*/
+.wrapper h2 { /*統一 方案標題*/
     margin-top: 60px;
     font-weight: bold;
     color: #151D20;
 }
 
-.wrapper h3 { /*適合人數*/
+/*適合人數*/
+.people {
     margin-top: 15px;
     color: #151D20;
-}
-
-.wrapper h1 { /*價格*/
-    color: #d51f1f;
-    margin-top: 130px;
-    font-family: 'Noto Serif JP';
-    font-weight: 500;
-    font-size: 40px;
 }
 
 .wrapper .num { /*方案 數字字體*/
@@ -135,23 +128,64 @@ main>h3 {
     letter-spacing: 4px;
 }
 
-.wrapper>li h3:last-child { /*了解更多*/
+/*插圖*/
+
+/*統一 插圖設定*/
+.wrapper img{ 
     display: block;
-    height: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; 
+
+    z-index: 2;
+}
+
+.plana img {
+    height: 120px;
+    top: 20px; /*微調*/
+    left: 28px;
+}
+
+.planb img {
+    height: 160px;
+    top: 10px; /*微調*/
+    left: 10px;
+}
+
+.planc img {
+    height: 155px;
+    top: 30px;  /*微調*/
+    left: 5px;
+}
+
+ /*價格*/
+ .wrapper h1 {
+    color: #d51f1f;
+    font-family: 'Noto Serif JP';
+    font-weight: 500;
+    font-size: 40px;
+
+    margin-top: 192px;
+}
+
+/*了解更多*/
+.wrapper>li h3:last-child { 
+    display: block;
+    height: 45px;
     width: 100%;
-    line-height: 60px;
+    line-height: 45px;
     text-align: center;
-    /* text-decoration: none; */
     background-color: #5FBBFF;
     color: #151D20;
     
-    margin-bottom: 0;
-
     position: absolute;
     bottom: 0;
 }
 
-.wrapper>li h3:last-child a{ /*了解更多*/
+.wrapper>li h3:last-child a{ 
     color: #151D20;
 }
 
@@ -162,3 +196,4 @@ main>h3 {
 .wrapper>li h3:last-child:hover a {
     color: white;
 }
+

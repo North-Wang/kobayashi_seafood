@@ -80,7 +80,7 @@ main{
 
 /*-----頁碼-----*/
 .nav { 
-    width: 870px;
+    width: 930px;
     height: 16px;
     line-height: 16px;
     display: flex;
@@ -97,7 +97,8 @@ main{
     width: 300px; /*注意是否蓋住.array*/
     display: flex;   
     justify-content: center;
-    font-size: 16px;
+    align-items: center;
+    font-size: 18px;
 
     position: absolute;
     left: 0;
@@ -108,7 +109,6 @@ main{
 }
 
 .page-num h3{ /*頁碼 間距*/
-
     margin-left: 2.5px;
     margin-right: 2.5px;
 }
@@ -129,7 +129,7 @@ main{
 }
 
 
-/*---排序方式-----*/
+/*-----排序方式-----*/
 .array{
     float: right;
     display: flex;
@@ -141,22 +141,33 @@ main{
 }
 
 .array form {
-    height: 16px;
     margin-left: 5px;
 
 }
-.array option{ /*下拉選單*/
-    font-size: 16px;
-    
+
+
+/*-----下拉式選單 測試-----*/
+select {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #7FC9FF;
+
+    padding-left: 10px;
+}
+
+option {
+    background-color: #E54343;
 }
 
 
 /*-----新聞-----*/
 
 .wrapper {
-    width: 930px; /*容器總寬*/
+    width: 990px; /*容器總寬*/
     display: flex;
-    justify-content:space-between;
+    justify-content:start;
     flex-wrap: wrap;
 }
 
@@ -168,11 +179,13 @@ main{
     overflow: hidden; /*裁切照片多餘的部分*/
 
     margin-bottom: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .wrapper>li:hover,
 .wrapper>li:hover section { /*新聞 hover*/
-    background-color: #1F5C89;
+    background-color: #478BBE;
 }
 
 .wrapper img { /*統一 news封面照*/ 
@@ -189,7 +202,6 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 
     background-color: #E4F1FC;
 }

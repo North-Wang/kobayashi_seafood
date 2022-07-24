@@ -36,6 +36,7 @@ main h3{ /*最新消息 發文時間*/
 }
 
 
+
 /*----------今日漁獲----------*/
 
 /*標題*/
@@ -109,6 +110,18 @@ main h3{ /*最新消息 發文時間*/
 .cover-fish li{
     position: relative; /*給魚類名稱定位用*/ 
 }
+
+/*魚類照片 遮罩*/
+.cover-fish .mask{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 50%;
+
+    z-index: 1;
+}
+
 .cover-fish  img{
     display: block;
         /*1920px*/
@@ -130,7 +143,6 @@ main h3{ /*最新消息 發文時間*/
     font-size: 125px;
     color: black;
     text-shadow: 2px 2px 5px white;
-    /* -webkit-text-stroke:2px #fffbfb; 文字外框*/
 
     position: absolute;
     top: 130px;
@@ -170,10 +182,6 @@ main h3{ /*最新消息 發文時間*/
 
     cursor: pointer; /*改變鼠標圖案*/
 }
-.cover button:hover a {
-    color:black;
-}
-
 
 /*倒數計時*/
 .countdown {
@@ -188,8 +196,7 @@ main h3{ /*最新消息 發文時間*/
 
 /*倒數數字*/
 .type-number{
-    font-family: 'Lora', serif;
-    
+    font-family: 'Lora', serif;    
     letter-spacing: 0px; /*微調。字體間距*/
 }
 
@@ -218,14 +225,18 @@ main h3{ /*最新消息 發文時間*/
     display: flex;
 }
 
-.news article{ /*統一 news文章*/
+.news article{ /*統一 news文章。同news分頁設定*/
     width: 270px; /*文章寬度*/
-    /* height: 400px; */
+    height: 470px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    overflow: hidden; /*裁切照片多餘的部分*/
+
     display: flex;
     flex-wrap: wrap;
     margin: auto 40px; /*左右margin*/
 
-    position: relative; /*控制遮罩位置*/   
+    position: relative; /*控制遮罩位置*/    
 }
 
 /*新聞 遮罩*/
@@ -241,18 +252,17 @@ main h3{ /*最新消息 發文時間*/
 
 .mask:hover {
     opacity: 0.4;
-
 }
 
 .news img { /*統一 news封面照*/ 
     width: 100%;
-    height: 250px;
+    height: 270px;
 }
 
-.news article>section{ /*統一 news內文 排版*/
-    background-color: #5FBBFF;
+.news article>section{ /*統一news內文排版。同news分頁設定*/
+    background-color: #E4F1FC;
     width: 100%;
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -260,14 +270,14 @@ main h3{ /*最新消息 發文時間*/
 
 /*每則新聞標題*/
 .news section h2{    
-    margin-top: 15px;
-    line-height: 0.5;
+    margin-top: 15px; /*同news分頁設定*/
+    line-height:1.6; /*同news分頁設定*/
 }
 
 /*每則新聞的時間*/ 
 .news section h3{    
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px; /*同news分頁設定*/
 }
 
 /*按鈕 more*/
@@ -287,8 +297,8 @@ main h3{ /*最新消息 發文時間*/
 }
 
 .news a:hover {
-    background-color: #0a1f2e;
-    color: rgb(149, 149, 149);
+    background-color: #173C57;
+    /* color: rgb(149, 149, 149); */
 
     cursor: pointer; /*改變鼠標圖案*/
 }
@@ -305,83 +315,87 @@ main h3{ /*最新消息 發文時間*/
     flex-direction: column;
 }
 
-.cut_fish .wrapper{
+.wrapper{
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
     
-    position:relative; /*魚類圖片定位用*/
+    position:relative; /*wrapper-point定位用*/
 }
 
 .cut_fish h1{ /*視覺圖 標題*/
-    /* font-size: 40px; */
-    font-size: 55px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 100px;
+    text-shadow: 2px 2px 5px white;
 
     position: absolute;
     top: 40px;
     /* top: 18px; */
 
-    z-index: 1;
+    z-index: 10;
 }
 
-.woodplate{ /*照片 木盤*/
+.wrapper-point { /*定位用參考區塊*/
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    z-index: 3;
+}
+
+/*木盤*/
+.woodplate{ 
     display: block;
     width: 650px;
 
-    padding-left: 55px; /*微調。視覺上水平置中*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -280px;
+    right: 0;
+    margin: auto;
+
+    z-index: 4;
 }
 
 /*全魚*/
-.cut_fish>.wrapper .fish-all {
+.fish-all{
     display: block;
     height: 345px;   
+    width: 773px;
 
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
-    left: 5%;
+    left: -340px; 
     margin: auto;
 
-    z-index: 1;
+    z-index: 5;
 }
 
-/*刀子*/
-.knife{
+/*刀子 1920px*/ 
+.knife {
     display: block;
+    width: 392px;
     height: 437px;
 
     position: absolute;
     top: 0;
     bottom: 0;
-    left:29%;  /*微調 刀子位置 1920px*/
+    left: -350px;
+    right: 0;    
     margin: auto;
 
-    z-index: 2;
+    z-index:7;
 }
-
-/* .cut_fish .fish{  照片 魚 父層
-    display: flex;
-    flex-direction: row;
-
-    margin-top: 0;
-    background-color: #1E2B58;
-    z-index: 10;
-
-    position: relative;
-    top: 0;
-} */
-
-/* .cut_fish .fish img { 照片 魚
-    display: block;
-    width: 500px;
-}
-
-.cut_fish .fish img:last-child {
-    position: absolute; 左右黏合
-} */
 
 /*----------品牌故事----------*/
 
@@ -448,10 +462,6 @@ main h3{ /*最新消息 發文時間*/
     .block-white{
         margin-top: 147px; 
     }
-
-    .knife{        
-        left: 24.5%; 
-    }
  }
  
  @media screen and (max-width:1280px) {
@@ -459,8 +469,5 @@ main h3{ /*最新消息 發文時間*/
         margin-top: 96px; /*1280px螢幕*/
     }
 
-    .knife{        
-        left: 18%; /*微調 刀子位置*/
-    }
  }
 
