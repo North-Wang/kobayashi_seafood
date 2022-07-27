@@ -191,9 +191,9 @@ main h3{ /*最新消息 發文時間*/
 }
 
 /*倒數數字*/
-.type-number{
-    font-family: 'Lora', serif;    
+.type-number{    
     letter-spacing: 0px; /*微調。字體間距*/
+    font-size: 40px;
 }
 
 /*---------------最新消息---------------*/
