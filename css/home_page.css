@@ -423,16 +423,17 @@ main h3{ /*最新消息 發文時間*/
 
 .block-white{
     background-color: white;
-    width: 565px;
+    width: 700px; /* 1920px */
     height: 225px;
     box-shadow: 1px 1px 10px black ;
 
     position: absolute;
     margin-left: 50%;
-    margin-top: 200px; /* 1920px 有RWD*/    
+    margin-top: 200px; /* 1920px */    
 
     z-index: 2;
 }
+
 
 .block-white>div {
     text-align: center;
@@ -441,31 +442,105 @@ main h3{ /*最新消息 發文時間*/
 
  /*品牌故事 標題*/
 .block-white h2 {
+    font-size: 24px; /* 1920px */
     text-align: left;
     margin-bottom: 30px;
 }
 
  /*品牌故事 內容*/
  .block-white h3 {
+    font-size: 20px;
     text-align: left;
-    width: 490px; /*控制多寬會換行*/
-    line-height: 1.6;
+    width: 600px; /* 1920px 控制多寬會換行*/
+    line-height: 2; /* 1920px */
  }
 
- /*RWD*/ 
+ 
+/*地圖位置*/
+.location {    
+    position: absolute; /* 調整地圖整體位置*/
+    top: 95px; /* 1920px */
+    right: -200px;
+}
+
+.map{
+    display: block;
+    height: 300px; /* 1920px */
+}
+/* location icon */
+.fa-location-dot{
+    font-size: 50px; /* 1920px */
+    color: #E64344;
+
+    position: absolute; /* 調整locate的位置 */
+    top: 65px; /* 1920px */
+    right: 140px; /* 1920px */
+
+    z-index: 1;
+}
+
+ /*------------------------RWD------------------------*/ 
 
  @media screen and (max-width:1600px) {
+    
     .block-white{
         margin-top: 147px; 
     }
+    /* 地圖位置 */
+    .location {    
+        position: absolute; /* 調整地圖整體位置*/
+        top: 110px; 
+        right: -118px;
+    }    
+    /* 北台灣地圖*/
+    .map{
+        height: 215px; 
+    }
+    /* location icon */
+    .fa-location-dot{
+        font-size: 45px; 
+
+        top: 47px; 
+        right: 107px; 
+}
  }
  
  @media screen and (max-width:1280px) {
+    /*地圖位置*/
+    .location {    
+        position: absolute; /* 調整地圖整體位置*/
+        top: 105px; 
+        right: -90px;
+    }
+    .map{
+        height: 180px;
+    }    
+    .fa-location-dot{    
+        font-size: 35px;    
+        top: 50px;
+        right: 95px;
+    }    
     .block-white{
+        width: 565px;
         margin-top: 96px; /*1280px螢幕*/
     }
-
+     /*品牌故事 標題*/
+    .block-white h2 {
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    /*品牌故事 內容*/
+    .block-white h3 {
+        font-size: 18px;
+        width: 450px; /*控制多寬會換行*/
+        line-height: 1.6;
+     }    
  }
 
+ 
+ @media screen and (max-width:414px) {}
+
+ @media screen and (max-width:360px) {}
 
  
