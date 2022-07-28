@@ -67,7 +67,7 @@ main h3{ /*最新消息 發文時間*/
     left:auto;
     right:auto; 
 
-    z-index: 1;
+    z-index: 5;
 }
 
 .arrow i{
@@ -120,12 +120,9 @@ main h3{ /*最新消息 發文時間*/
 
 .cover-fish  img{
     display: block;
-        /*1920px*/
+       
     width: 600px; 
     height: 400px; 
-        /*1280px*/
-    /* width: 752.5px; */
-    /* height: 350px; */    
 }
 
 .cover-fish img:nth-of-type(2) {
@@ -146,7 +143,6 @@ main h3{ /*最新消息 發文時間*/
     right: 0;
 
     z-index: 8;
-
 }
 
 /*下訂按鈕*/
@@ -537,9 +533,30 @@ main h3{ /*最新消息 發文時間*/
         line-height: 1.6;
      }    
  }
-
  
- @media screen and (max-width:414px) {}
+ @media screen and (max-width:414px) {
+
+    /*----------各分頁統一設定----------*/
+    
+        /*各區塊主題文字*/
+    main h1{ 
+        font-size: 24px;        
+        letter-spacing:10px; /*微調。字距*/
+    }
+
+        /* 本日漁貨 */
+    .cover-fish  img{
+        width: 345px; 
+        height: 160px; 
+    }
+
+    /*魚類名稱的文字設定*/
+    .fish-name{
+    font-size: 35px;
+    }
+
+    
+ }
 
  @media screen and (max-width:360px) {}
 

@@ -13,13 +13,13 @@ a{
 /*----------頁首----------*/
 
 /*統一設定*/
-header{
-    background-color:#151D20;
+header{    
     height: 160px;
     font-size: 16px;
     font-family:'Noto Serif JP';
     letter-spacing:4px; /*微調。字距*/
     color: #EEF4FF;
+    background-color:#151D20;
 
     display: flex;
     justify-content: center;
@@ -86,15 +86,20 @@ header nav{
 }
 
 /*品牌logo*/
-header>a{ /*調整logo的位置*/
+header>a { /*調整logo的位置*/
     position: absolute;
     margin: 15px auto;
 }
-header .logo{
+header .logo {
     width: 120px;
 
     z-index: 1;
 }
+
+header .wrapper {
+    display: none;
+}
+
 
 /*右側*/
 .nav-r {
@@ -280,3 +285,47 @@ footer h3:first-child {
 footer ul:last-child a:hover {
     color:#79CCDC;
 }
+
+/*----------------RWD------------------------*/
+
+@media screen and (max-width:428px) {
+
+    header {
+        height: 55px;
+        width: 100%;
+    }
+
+    /* 關閉網頁LOGO */
+    .logo {
+        display: none;
+    }
+
+    header .wrapper{
+        display: block;
+        display: flex;
+        flex-direction:row;
+        width: 100%;
+        background-color: #5FBBFF;    
+    }
+    /* 開啟網頁LOGO */
+    .logo-m {
+        width: 40px;
+        height: 32px; 
+        margin-left: 5px;
+    }
+        /* 漢堡 */
+    .fa-bars {
+        margin-right: 15px;
+    }
+
+        /*左側導覽列*/
+    .nav-l {
+        display:none;
+    }
+        /*右側導覽列*/
+    .nav-r {
+        display:none;
+    }
+}
+
+ @media screen and (max-width:360px) {}
