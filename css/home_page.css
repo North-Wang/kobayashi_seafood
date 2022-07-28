@@ -392,14 +392,21 @@ main h3{ /*最新消息 發文時間*/
 /*----------品牌故事----------*/
 
 .story{
+    width: 100%;
+
     position: relative;
     display: flex;
 }
 
 /*海浪圖*/
-.story>img{
+.story-img {
     display: block;
     width: 50%;
+}
+
+/* 海浪圖-手機版*/
+.story-img-m {
+    display: none;
 }
 
 .block-blue{
@@ -632,7 +639,7 @@ main h3{ /*最新消息 發文時間*/
     .news {
         height: 575px;
     }
-    
+
     .title-news {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -694,10 +701,71 @@ main h3{ /*最新消息 發文時間*/
 
     /*---------品牌故事----------*/
 
-    .story {
+    /* .story {
+        display: none;
+    } */
+
+    /* 海浪背景 */
+    .story-img {
         display: none;
     }
- }
+    
+    /* 海浪圖-手機版*/
+    .story-img-m {
+        display: block;
+        width: 100%;
+        height: 415px;
+    }
+
+    /* 藍底區塊 */
+    .block-blue {
+        width: 215px;
+        height: 75px;
+        position: absolute;
+        top: 535px;
+        right: 45px;
+    }
+
+    /* 白底區塊 */
+    .block-white {
+        width: 225px;
+        height: 725px;
+        
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        
+        margin-top: auto;
+        margin-left: auto;
+        padding-bottom: 160px;
+    }
+
+    /* 品牌介紹 */
+    .block-white h3 {
+        /* font-size: 16px; */
+        width: 150px;
+    }
+
+    /* 位置 */
+    .location {
+        top: 386px;
+        bottom: 0;
+        right: 0px;
+        left: 0;
+        margin: auto;
+    }
+
+    .fa-location-dot {
+        top: 41px;
+    }
+
+    
+    .map {
+        height: 160px;
+    }
 
  /*-----------------------------------------------------------------*/
 
