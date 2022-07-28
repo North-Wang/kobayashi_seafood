@@ -255,9 +255,9 @@ footer ul:first-child i{
     margin-right: 5px;
 }
 
-/* footer ul:first-child li:nth-child(n+3){ 清除社群媒體的hover底線效果
+footer ul:first-child li:nth-child(n+3){ 清除社群媒體的hover底線效果
     border-bottom: 0;
-}  */
+} 
 
 footer ul:first-child i:hover {
     color: #79ccdc;
@@ -340,16 +340,35 @@ footer ul:last-child a:hover {
 
     /*---------------footer--------------*/
 
+    footer {
+        align-items: center;
+
+        padding-bottom: 70px;
+    }
     /* 導覽列 */
     footer ul:first-child {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        width: 300px;
         flex-wrap: wrap;
 
-        width: 380px;
-        
-        margin-bottom: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* 導覽列 文字 */
+    footer ul:first-child a {
+        font-size: 18px;
+        letter-spacing: 2px;
+        width: 95px;
+    }
+    /* 社群媒體 icon */
+    footer ul:first-child i {
+        width: 25px;
+    }
+
+    /* 版權資訊 */
+    footer h3 {
+        font-size: 14px;
+        width: 300px;       
     }
 }
 

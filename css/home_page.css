@@ -137,8 +137,10 @@ main h3{ /*最新消息 發文時間*/
 
     position: absolute;
     top: 130px;
+    bottom: 0;
     left: 0;
     right: 0;
+    margin: auto;
 
     z-index: 8;
 }
@@ -548,11 +550,33 @@ main h3{ /*最新消息 發文時間*/
         letter-spacing:10px; /*微調。字距*/
     }
 
+    main h2 {
+        font-size: 18px;
+    }
+
     /*----------本日漁獲-----------*/
+
+    .cover {
+        align-items: center;
+    }
 
     /*標題 統一 調整上下留白空間*/
     .title-cover{ 
         line-height: 55px; 
+    }
+
+    /* 下訂按鈕 */
+    .cover button {
+        width: 130px;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 103px;
+    }
+
+    .cover button a {
+        font-size: 16px;
+        line-height: 30px; /* 和button height相同*/
+        letter-spacing: 4px;
     }
 
     /*魚類照片*/
@@ -565,6 +589,10 @@ main h3{ /*最新消息 發文時間*/
     .fish-name {
         top: 55px;
         font-size: 45px;
+        margin: auto;
+        padding-left: 15px;
+        letter-spacing: 18px;
+        
     }
 
     /* 箭頭 容器*/
@@ -601,27 +629,63 @@ main h3{ /*最新消息 發文時間*/
 
     /*---------最新消息----------*/
 
+    .news {
+        height: 575px;
+    }
+    
+    .title-news {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
     /*三則新聞的父層*/
     .news>div{ 
         flex-direction: column;
     }
+    /* 遮罩 */
+    .mask{
+        display: none;
+    }
+
     /* 統一 news文章 */
     .news article {
-        width: 310px;
+        width: 330px;
         height: 110px;
         border-radius: 5px;
         box-shadow: .5px .5px 2.5px rgb(135, 135, 135);
 
         flex-direction: row;
+        flex-wrap: nowrap; /* 讓圖文水平排列 */
+
         margin: auto;
         margin-bottom: 25px;
     }
 
     /* 統一 news封面照 */ 
     .news img { 
+        width: 110px;
         height: 110px;
     }
 
+    /*每則新聞標題*/
+    .news section h2{    
+        text-align: start;
+        letter-spacing: 1.2px;
+        margin-left: 15px;
+        line-height: 1.3;
+    }
+
+    .news a {
+        width: 130px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 5px;
+
+        font-size: 16px;
+
+        margin-top: 0;
+    }
+    
     /*---------視覺圖----------*/
 
     .cut_fish {
