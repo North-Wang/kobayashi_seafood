@@ -1,22 +1,22 @@
 /*-------------自動輪播圖-------------*/
 
-const wrap_slide = document.getElementsByClassName("wrap-slide")[0];
-    console.log(wrap_slide);
-    //確認有幾張slide
-const slide = document.getElementsByClassName("slidef");
-    console.log(slide.length);
-const length_slid = slide.length;
+// const wrap_slide = document.getElementsByClassName("wrap-slide")[0];
+//     console.log(wrap_slide);
+//     //確認有幾張slide
+// const slide = document.getElementsByClassName("slidef");
+//     console.log(slide.length);
+// const length_slid = slide.length;
 
 
-    //間隔幾秒切換slide
-setInterval(function(){
-     for(i = 0; i < slide.length; i++){
-        let a = 0;
-        wrap_slide.setAttribute("style","margin-left:" + a + "px");
-        a++;
-     };   
+//     //間隔幾秒切換slide
+// setInterval(function(){
+//      for(i = 0; i < slide.length; i++){
+//         let a = 0;
+//         wrap_slide.setAttribute("style","margin-left:" + a + "px");
+//         a++;
+//      };   
     
-},1000);
+// },1000);
  
 
 

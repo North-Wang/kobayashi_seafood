@@ -33,8 +33,9 @@ header .en{
     margin-top: 4px; /*微調。和中文字體平行*/
 }
 
+/*左右導覽列的總寬*/
 header>div{ 
-    width: 100%; /*左右導覽列的總寬*/
+    width: 100%; 
 }
 
 header a{
@@ -288,11 +289,24 @@ footer ul:last-child a:hover {
 
 /*----------------RWD------------------------*/
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:414px) {
 
     header {
         height: 55px;
         width: 100%;
+    }
+
+    /* 讓導覽列寬度滿版 */
+    header>div{ 
+        width: auto; 
+    }
+
+    header .wrapper{
+        display: block;
+        display: flex;
+        width: 100%;
+        flex-direction:row;
+        justify-content: start;
     }
 
     /* 關閉網頁LOGO */
@@ -300,24 +314,21 @@ footer ul:last-child a:hover {
         display: none;
     }
 
-    header .wrapper{
-        display: block;
-        display: flex;
-        flex-direction:row;
-        width: 100%;
-        background-color: #5FBBFF;    
-    }
     /* 開啟網頁LOGO */
     .logo-m {
         width: 40px;
         height: 32px; 
-        margin-left: 5px;
+        
+        margin-left: 10px;
+    }
+    /* 手機版店名*/
+    .logo-m-name {
+        margin-right: 270px;
     }
         /* 漢堡 */
     .fa-bars {
         margin-right: 15px;
     }
-
         /*左側導覽列*/
     .nav-l {
         display:none;
@@ -325,6 +336,20 @@ footer ul:last-child a:hover {
         /*右側導覽列*/
     .nav-r {
         display:none;
+    }
+
+    /*---------------footer--------------*/
+
+    /* 導覽列 */
+    footer ul:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 380px;
+        
+        margin-bottom: 50px;
     }
 }
 

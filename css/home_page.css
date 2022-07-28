@@ -39,8 +39,6 @@ main h3{ /*最新消息 發文時間*/
 .title-cover{ /*統一 調整上下留白空間*/
         /*1920px*/
     line-height: 80px; 
-        /*1280px*/
-    /* line-height: 60px; */
 }
 
 /*跑馬燈*/
@@ -430,7 +428,6 @@ main h3{ /*最新消息 發文時間*/
     z-index: 2;
 }
 
-
 .block-white>div {
     text-align: center;
     padding: 30px;
@@ -450,7 +447,6 @@ main h3{ /*最新消息 發文時間*/
     width: 600px; /* 1920px 控制多寬會換行*/
     line-height: 2; /* 1920px */
  }
-
  
 /*地圖位置*/
 .location {    
@@ -475,13 +471,15 @@ main h3{ /*最新消息 發文時間*/
     z-index: 1;
 }
 
- /*------------------------RWD------------------------*/ 
+ /*------------------------RWD----------------------------------*/ 
 
  @media screen and (max-width:1600px) {
     
+    /*----------視覺圖---------*/
+
     .block-white{
         margin-top: 147px; 
-    }
+    }   
     /* 地圖位置 */
     .location {    
         position: absolute; /* 調整地圖整體位置*/
@@ -498,16 +496,20 @@ main h3{ /*最新消息 發文時間*/
 
         top: 47px; 
         right: 107px; 
+    }
 }
- }
  
+  /*-----------------------------------------------------------------*/
+
  @media screen and (max-width:1280px) {
+
     /*地圖位置*/
     .location {    
         position: absolute; /* 調整地圖整體位置*/
         top: 105px; 
         right: -90px;
     }
+
     .map{
         height: 180px;
     }    
@@ -531,9 +533,11 @@ main h3{ /*最新消息 發文時間*/
         font-size: 18px;
         width: 450px; /*控制多寬會換行*/
         line-height: 1.6;
-     }    
+    }    
  }
  
+ /*-----------------------------------------------------------------*/
+
  @media screen and (max-width:414px) {
 
     /*----------各分頁統一設定----------*/
@@ -544,19 +548,94 @@ main h3{ /*最新消息 發文時間*/
         letter-spacing:10px; /*微調。字距*/
     }
 
-        /* 本日漁貨 */
+    /*----------本日漁獲-----------*/
+
+    /*標題 統一 調整上下留白空間*/
+    .title-cover{ 
+        line-height: 55px; 
+    }
+
+    /*魚類照片*/
     .cover-fish  img{
         width: 345px; 
         height: 160px; 
     }
 
-    /*魚類名稱的文字設定*/
-    .fish-name{
-    font-size: 35px;
+    /*魚類名稱*/
+    .fish-name {
+        top: 55px;
+        font-size: 45px;
     }
 
+    /* 箭頭 容器*/
+    .arrow {
+        min-width: 30rem;
+        width: 46rem;        
+    }
+    /* 箭頭 icon*/
+    .arrow i{
+        font-size: 30px;
+        width: 40px;
+        overflow: hidden;
+        color: #18264B;
     
+        opacity: 80%;
+    }
+
+    /* 倒數計時 */
+    .countdown {
+        display: flex;
+        line-height: 55px;
+    }
+    .countdown h1:first-child {
+        margin-right: 0px;
+    }
+    /* "倒數計時" */
+    main h1 {
+        font-size: 20px;
+    }
+    /* 數字 */
+    .type-number {
+        font-size: 24px;
+    }
+
+    /*---------最新消息----------*/
+
+    /*三則新聞的父層*/
+    .news>div{ 
+        flex-direction: column;
+    }
+    /* 統一 news文章 */
+    .news article {
+        width: 310px;
+        height: 110px;
+        border-radius: 5px;
+        box-shadow: .5px .5px 2.5px rgb(135, 135, 135);
+
+        flex-direction: row;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    /* 統一 news封面照 */ 
+    .news img { 
+        height: 110px;
+    }
+
+    /*---------視覺圖----------*/
+
+    .cut_fish {
+        display: none;
+    }
+
+    /*---------品牌故事----------*/
+
+    .story {
+        display: none;
+    }
  }
+
+ /*-----------------------------------------------------------------*/
 
  @media screen and (max-width:360px) {}
 
