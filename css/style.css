@@ -170,6 +170,25 @@ header i:hover{
     color:#79CCDC;
 }
 
+/*-------手機版導覽列-------*/
+
+header .nav-m {
+    display: none;
+    width: 160px;
+    background-color: #151D20;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    
+    z-index: 10;    
+}
+
+header .nav-m li{
+    height: 40px;
+}
+
 /*--------------------頁尾--------------------*/
 
 /*統一設定*/
