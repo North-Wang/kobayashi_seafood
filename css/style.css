@@ -165,28 +165,18 @@ header .wrapper {
 }
 
 /*font awsome icon*/
-
 header i:hover{
     color:#79CCDC;
 }
 
 /*-------手機版導覽列-------*/
 
-header .nav-m {
+.search-m {
     display: none;
-    width: 160px;
-    background-color: #151D20;
-
-    display: flex;
-    flex-direction: column;
-
-    position: absolute;
-    
-    z-index: 10;    
 }
 
-header .nav-m li{
-    height: 40px;
+.nav-m {
+    display: none;        
 }
 
 /*--------------------頁尾--------------------*/
@@ -332,30 +322,112 @@ footer ul:last-child a:hover {
         display: none;
     }
 
-    /* 開啟網頁LOGO */
+    /* 關閉網頁版左側導覽列 */
+    .nav-l {
+        display:none;
+    }
+
+    /* 關閉網頁版右側導覽列 */
+    .nav-r {
+        display:none;
+    }
+
+    /* 開啟手機版網頁LOGO */
     .logo-m {
         width: 40px;
         height: 32px; 
         
         margin-left: 10px;
     }
+
     /* 手機版店名*/
     .logo-m-name {
         margin-right: 270px;
     }
+
+    /* 開啟搜尋列icon */
+    .search-m {
+        display: block;
+        font-size: 1.2em;
+        float: right;     
+
+        margin-top: 0;
+        margin-right: 10px;
+        margin-left: -36px;
+    }
+
+    .search-m::after {
+        content: "";
+        display: block;
+        width: 0;   
+        height: 16px;
+
+        position: absolute;
+        right: 50px;
+        border-bottom: 2px solid #5FBBFF;
+
+        transition: ease 1s; 
+    }
+
+    /*.search-m:hover::after {
+        content: "";
+        width: 100px;
+    } */
+
         /* 漢堡 */
     .fa-bars {
         margin-right: 15px;
     }
-        /*左側導覽列*/
-    .nav-l {
-        display:none;
-    }
-        /*右側導覽列*/
-    .nav-r {
-        display:none;
+
+    /* 手機版導覽列 */
+    .nav-m {
+        width: 160px;
+        background-color: #151D20;
+
+        /* display: flex; */
+        display: none;
+        flex-direction: column;
+
+        position: absolute;
+        top: 55px;
+        right: 0px;
+    
+        z-index: 10;    
     }
 
+    .nav-m li {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    .nav-m li a{
+        display: block;
+
+        margin-left: 42px;
+        margin-right: 30px;
+    }
+
+    /* 微調 hover底線寬度*/
+    .nav-m li:nth-of-type(4) a{
+        margin-right: 52px;
+    }
+    .nav-m li:nth-child(n+5) a{
+        margin-right: 74px;
+    }
+
+    /* Q&A */
+    header .en {
+        letter-spacing: 1px;
+        margin-top: auto;
+    }
+
+    /* hover效果*/    
+    .nav-m li:hover a {
+        border-bottom: 2px solid #79ccdc;
+        color:#5FBBFF;
+    }
+    
     /*---------------footer--------------*/
 
     footer {

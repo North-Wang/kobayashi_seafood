@@ -27,15 +27,26 @@
         <!--首頁 Font Awsome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="">
     <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script>     
+
+    <style id="serch-d"></style>
 </head>
 <body>
     <header>
         <!--LOGO-->
         <a href="index.html"><img class="logo" src="img/icon-logo.svg" alt="LOGO"></a>
+        
         <!--LOGO mobile-->
         <div class="wrapper">
             <a href="index.html"><img class="logo-m" src="./img/icon-logo-m.svg" alt="LOGO-m"></a>
             <img class="logo-m-name" src="./img/homepage/logo-m1.png" alt="小野水產">
+                <!--搜尋欄-->
+            <!-- <div class="wra-searc">
+                <input type="text">
+                <button> -->
+                    <i class="fa-solid fa-magnifying-glass fa-lg search-m"></i>
+                    <span class="search-m-s"></span>
+                <!-- </button>
+            </div> -->            
             <i class="fa-solid fa-bars"></i>
         </div>       
 
@@ -51,7 +62,7 @@
                 </ul>
             </nav>           
                    
-            <!--會員專區-->
+            <!--右側導覽列-->
             <nav class="nav-r">
                 <ul>
                     <li><i class="fa-solid fa-magnifying-glass fa-lg"></i></li>
@@ -63,16 +74,15 @@
         </div>   
         
         <!-------Nav Mobile-->
-
-        <ul class="nav-m">
-            <li><i class="fa-solid fa-magnifying-glass fa-lg"></i></li>
-            <li>最新消息</li>
-            <li>訂閱方案</li>
-            <li>精選商品</li>
-            <li>購物車</li>
-            <li>Q&A</li>
-            <li>登入</li>
-            <li>註冊</li>
+        
+        <ul class="nav-m">            
+            <li><a href="#">最新消息</a></li>
+            <li><a href="#">訂閱方案</a></li>
+            <li><a href="#">精選商品</a></li>
+            <li><a href="#">購物車</a></li>
+            <li><a class="en" href="#">Q&A</a></li>
+            <li><a href="#">登入</a></li>
+            <li><a href="#">註冊</a></li>
         </ul>
     </header>
 
