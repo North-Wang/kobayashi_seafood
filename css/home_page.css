@@ -437,6 +437,7 @@ main h3{ /*最新消息 發文時間*/
     z-index: 2;
 }
 
+/*品牌故事的容器*/
 .block-white>div {
     text-align: center;
     padding: 30px;
@@ -553,7 +554,7 @@ main h3{ /*最新消息 發文時間*/
     
         /*各區塊主題文字*/
     main h1{ 
-        font-size: 24px;        
+        font-size: 22px;        
         letter-spacing:10px; /*微調。字距*/
     }
 
@@ -676,6 +677,7 @@ main h3{ /*最新消息 發文時間*/
 
     /*每則新聞標題*/
     .news section h2{    
+        font-size: 16px;
         text-align: start;
         letter-spacing: 1.2px;
         margin-left: 15px;
@@ -701,37 +703,46 @@ main h3{ /*最新消息 發文時間*/
 
     /*---------品牌故事----------*/
 
-    /* .story {
-        display: none;
-    } */
+    .story {
+        background-image: url(../img/homepage/sea-m.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 640px;
+        overflow: hidden;
+        
+        margin: 1px;
+    }
 
     /* 海浪背景 */
     .story-img {
-        display: none;
+        /* display: none; */
+        width: 100%;
+        height: 500px;
     }
     
     /* 海浪圖-手機版*/
-    .story-img-m {
+    /* .story-img-m {
         display: block;
         width: 100%;
         height: 415px;
-    }
+    } */
 
     /* 藍底區塊 */
     .block-blue {
         width: 215px;
         height: 75px;
         position: absolute;
-        top: -175px;
+        top: -462px;
         right: 45px;
     }
 
     /* 白底區塊 */
     .block-white {
         width: 225px;
+        height: 507px;
         
         position: absolute;
-        top: 670px;
+        top: 0px;
         bottom: 0;
         left: 0;
         right: 0;
@@ -740,21 +751,32 @@ main h3{ /*最新消息 發文時間*/
         display: flex;
         flex-direction: column;
         
-        margin-top: auto;
-        margin-left: auto;
-        padding-bottom: 160px;
+    }
+
+    /* 品牌故事的容器 */
+    .block-white>div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+        padding: 25px;
     }
 
     /* "品牌故事" */
     .block-white h2 {
+        font-size: 16px;
         text-align: center;
-
         position: static;
+
+        margin-bottom: 25px;
     }
 
     /* 品牌介紹 */
     .block-white h3 {
-        /* font-size: 16px; */
+        font-size: 16px;
         width: 100%;
         text-align: center;
 
@@ -763,25 +785,20 @@ main h3{ /*最新消息 發文時間*/
 
     /* 位置 */
     .location {
-        top: 0px;
-        bottom: 0;
-        right: 0px;
-        left: 0;
-        margin: auto;
-        position: relative;
-    }
+    } 
 
     .fa-location-dot {
-        top: 41px;
+        margin-top: 275px;
+        left: 120px;
     }
-
     
     .map {
         height: 160px;
+        margin-top: 290px;
+        margin-left: 12px;
     }
+ }
 
  /*-----------------------------------------------------------------*/
 
- @media screen and (max-width:360px) {}
-
- 
+ @media screen and (max-width:380px) {}

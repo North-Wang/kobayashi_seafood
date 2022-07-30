@@ -369,11 +369,6 @@ footer ul:last-child a:hover {
         transition: ease 1s; 
     }
 
-    /*.search-m:hover::after {
-        content: "";
-        width: 100px;
-    } */
-
         /* 漢堡 */
     .fa-bars {
         margin-right: 15px;
