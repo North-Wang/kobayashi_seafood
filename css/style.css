@@ -316,6 +316,9 @@ footer ul:last-child a:hover {
         flex-direction:row;
         align-items: center;
         justify-content:space-between;
+
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .wrapper-h>li {
