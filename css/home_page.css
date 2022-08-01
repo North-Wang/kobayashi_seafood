@@ -142,7 +142,7 @@ main h3{ /*最新消息 發文時間*/
     right: 0;
     margin: auto;
 
-    z-index: 8;
+    z-index: 3;
 }
 
 /*下訂按鈕*/
@@ -157,7 +157,7 @@ main h3{ /*最新消息 發文時間*/
     letter-spacing:10px;
 
     position: absolute;
-    z-index: 2;
+    z-index: 5;
 
     margin-top: 290px;
 }
@@ -171,6 +171,7 @@ main h3{ /*最新消息 發文時間*/
 
 .cover button:hover {
     background-color:#96282c;    
+    border: 0;
 
     cursor: pointer; /*改變鼠標圖案*/
 }

@@ -98,6 +98,7 @@ header .logo {
 }
 
 header .wrapper-h {
+    width: auto; /*避免寬度炸開*/
     display: none;
 }
 
@@ -343,7 +344,7 @@ footer ul:last-child a:hover {
     /* 手機版店名*/
     .logo-m-name {
         height: 15px;
-        margin-right: 65vw;
+        margin-right: 65vw; /*控制到導覽列icon的間距*/
     }
 
     /* 開啟搜尋列icon */
