@@ -97,7 +97,7 @@ header .logo {
     z-index: 1;
 }
 
-header .wrapper {
+header .wrapper-h {
     display: none;
 }
 
@@ -263,8 +263,8 @@ footer ul:first-child i{
     margin-right: 5px;
 }
 
-footer ul:first-child li:nth-child(n+3){ 清除社群媒體的hover底線效果
-    border-bottom: 0;
+footer ul:first-child li:nth-child(n+3){ /* 清除社群媒體的hover底線效果 */
+    border-bottom:0;
 } 
 
 footer ul:first-child i:hover {
@@ -309,11 +309,11 @@ footer ul:last-child a:hover {
         width: auto; 
     }
 
-    header .wrapper{
-        display: block;
+    header .wrapper-h{
         display: flex;
         width: 100%;
         flex-direction:row;
+        align-items: center;
         justify-content: start;
     }
 
@@ -342,7 +342,8 @@ footer ul:last-child a:hover {
 
     /* 手機版店名*/
     .logo-m-name {
-        margin-right: 270px;
+        height: 15px;
+        margin-right: 65vw;
     }
 
     /* 開啟搜尋列icon */
@@ -452,9 +453,15 @@ footer ul:last-child a:hover {
 
     /* 版權資訊 */
     footer h3 {
-        font-size: 14px;
-        width: 300px;       
+        font-size: 16px;
+    }
+
+    footer small {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
+
+ /*-----------------------------------------------------------------*/
 
  @media screen and (max-width:360px) {}

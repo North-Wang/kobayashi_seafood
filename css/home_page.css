@@ -329,7 +329,8 @@ main h3{ /*最新消息 發文時間*/
     z-index: 10;
 }
 
-.wrapper-point { /*定位用參考區塊*/
+/*定位用參考區塊*/
+.wrapper-point { 
     width: 10px;
     height: 10px;
     position: absolute;
@@ -360,7 +361,7 @@ main h3{ /*最新消息 發文時間*/
 /*全魚*/
 .fish-all{
     display: block;
-    height: 345px;   
+    /* height: 345px;    */
     width: 773px;
 
     position: absolute;
@@ -377,7 +378,7 @@ main h3{ /*最新消息 發文時間*/
 .knife {
     display: block;
     width: 392px;
-    height: 437px;
+    /* height: 437px; */
 
     position: absolute;
     top: 0;
@@ -655,7 +656,7 @@ main h3{ /*最新消息 發文時間*/
         display: none;
     }
 
-    /* 統一 news文章 */
+    /* 統一news文章(和news分頁設定相同) */
     .news article {
         width: 330px;
         height: 110px;
@@ -698,9 +699,39 @@ main h3{ /*最新消息 發文時間*/
     /*---------視覺圖----------*/
 
     .cut_fish {
-        display: none;
+        /* display: none; */
+        height: 350px;
     }
 
+    /* 標語 */
+    .cut_fish h1 {
+        font-size: 34px;
+        letter-spacing:5px;
+        top: 20px;
+    }
+
+    /*定位用參考區塊*/
+    .wrapper-point { 
+        left: 75vw;
+        top: 10vh;
+    }
+
+    /* 木盤 */
+    .woodplate {
+        width: 300px;
+    }
+
+    /* 全魚 */
+    .fish-all {
+        width: 90vw;
+        left: -76vw;
+    }
+
+    /* 刀子 */
+    .knife {
+        width: 185px;
+        left: -115vw;
+    }
     /*---------品牌故事----------*/
 
     .story {
@@ -710,23 +741,15 @@ main h3{ /*最新消息 發文時間*/
         height: 640px;
         overflow: hidden;
         
-        margin: 1px;
     }
 
     /* 海浪背景 */
     .story-img {
-        /* display: none; */
+        display: none;
         width: 100%;
         height: 500px;
     }
     
-    /* 海浪圖-手機版*/
-    /* .story-img-m {
-        display: block;
-        width: 100%;
-        height: 415px;
-    } */
-
     /* 藍底區塊 */
     .block-blue {
         width: 215px;
@@ -778,7 +801,7 @@ main h3{ /*最新消息 發文時間*/
     .block-white h3 {
         font-size: 16px;
         width: 100%;
-        text-align: center;
+        text-align:left;
 
         position: static;
     }
@@ -801,4 +824,4 @@ main h3{ /*最新消息 發文時間*/
 
  /*-----------------------------------------------------------------*/
 
- @media screen and (max-width:380px) {}
+ @media screen and (max-width:360px) {}

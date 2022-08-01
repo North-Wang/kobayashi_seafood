@@ -18,7 +18,7 @@ hamber.addEventListener("click", function(){
     /* 取得.search_m的width屬性值 */
 let serch_m_b = window.getComputedStyle(search_m, '::after').getPropertyValue("width"); /* #search-m的after偽元素的width屬性 */
 let serch_d = document.getElementById("serch-d");
-let serch_d_el = serch_d.sheet;
+let serch_d_el = serch_d.sheet; //.sheet是css CSS object model CSSOM WEB API -CSSOM
 
 /* 搜尋列icon綁定click事件 */
 search_m.addEventListener("click", function(){
