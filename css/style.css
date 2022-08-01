@@ -315,7 +315,12 @@ footer ul:last-child a:hover {
         width: 100%;
         flex-direction:row;
         align-items: center;
-        justify-content: start;
+        justify-content:space-between;
+    }
+
+    .wrapper-h>li {
+        display: flex;
+        align-items: center;
     }
 
     /* 關閉網頁LOGO */
@@ -344,7 +349,7 @@ footer ul:last-child a:hover {
     /* 手機版店名*/
     .logo-m-name {
         height: 15px;
-        margin-right: 65vw; /*控制到導覽列icon的間距*/
+        /* margin-right: 65vw; 控制到導覽列icon的間距 */
     }
 
     /* 開啟搜尋列icon */
