@@ -1,8 +1,27 @@
 /*------------選擇購買數量-------------*/
 
-let mines = document.querySelector("fa-minus");
-let plus = document.querySelector("fa-plus");
+let minus = document.querySelector(".fa-minus"); /* 減少購買的數量 */
+let plus = document.querySelector(".fa-plus"); /* 增加購買的數量 */
 let merch_num = document.querySelector(".number"); /* 購買的數量 */ 
+// console.log(merch_num.innerHTML); /* 購買的數量 內文 */
+
+//增加數量
+plus.addEventListener("click",function(e){   
+    e.preventDefault(); 
+    merch_num.innerHTML++;
+    console.log(merch_num.innerHTML);
+});
+
+//減少數量
+minus.addEventListener("click",function(e){
+    e.preventDefault();
+    if(merch_num.innerHTML == 0){
+        
+    }else{
+        merch_num.innerHTML--;
+        console.log(merch_num.innerHTML);
+    }    
+});
 
 /*------------擇一付款方式-------------*/
 let cli_1 = document.querySelector(".radio1");
