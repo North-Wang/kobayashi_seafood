@@ -317,7 +317,7 @@ footer ul:last-child a:hover {
         align-items: center;
         justify-content:space-between;
 
-        padding-left: 10px;
+        padding-left: 15px;
         padding-right: 10px;
     }
 
@@ -346,13 +346,12 @@ footer ul:last-child a:hover {
         width: 40px;
         height: 32px; 
         
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
 
     /* 手機版店名*/
     .logo-m-name {
         height: 15px;
-        /* margin-right: 65vw; 控制到導覽列icon的間距 */
     }
 
     /* 開啟搜尋列icon */
@@ -381,7 +380,7 @@ footer ul:last-child a:hover {
 
         /* 漢堡 */
     .fa-bars {
-        margin-right: 15px;
+        
     }
 
     /* 手機版導覽列 */

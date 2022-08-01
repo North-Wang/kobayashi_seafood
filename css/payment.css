@@ -155,7 +155,7 @@ main{
 }
 
 /*商品介紹*/
-.wrapper li:nth-of-type(2) h3{
+.intro{
     text-align: left;
 
     display: block;
@@ -593,7 +593,7 @@ main{
     /*----------------card1 商品明細----------*/
 
     .card1 {
-        width: 400px;
+        width: 350px;
         height: 1000px;
 
         flex-direction: column;
@@ -604,12 +604,35 @@ main{
         width: auto;
         height: auto;
     }
-    
+
     /* 商品圖片 */
     .card1 img {
         width: 200px;
         height: 200px;
         float:none;
+
+        margin-top: 30px;
+    }
+
+    /*商品名稱*/
+    .wrapper h2{
+        text-align: center;
+
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    /*商品介紹*/
+    .intro {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+}
+
+    /*----------------card2 金流資訊----------*/
+
+    .card2 {
+        width: 350px;
     }
 }
 
