@@ -1,4 +1,4 @@
-/* 分頁共同設定*/
+/* 分頁共同設定 */
 
 main>h1{ /*分頁標題*/
     display: block;
@@ -108,6 +108,11 @@ main{
     background-color: #D6EDFF;
 
     margin-bottom: 50px; /*cards之間的距離*/
+}
+
+/*關閉 手機版標題*/
+.card1-title-m {
+    display: none;
 }
 
 /*左側 商品照片*/
@@ -569,7 +574,7 @@ main{
 
 /*-----------------------------------------------------------------*/
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
 
     /*-----------分頁共同設定----------*/
 
@@ -594,15 +599,36 @@ main{
 
     .card1 {
         width: 350px;
-        height: 1000px;
-
+        
         flex-direction: column;
         align-items: center;
+
+        padding-bottom: 135px; /* 控制card1高度*/
+
+        background-color:white;
     }
 
     .card1>li {
-        width: auto;
+        width: 100%;
         height: auto;
+    }
+
+    
+    /*開啟 手機版標題*/
+    .card1>span {
+        display: block;
+        width: 100%;
+    }
+
+    .card1-title-m {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-weight: bold;
+
+        background-color: #D6EDFF;
     }
 
     /* 商品圖片 */
@@ -612,6 +638,8 @@ main{
         float:none;
 
         margin-top: 30px;
+        margin-right: auto; /* 水平置中 */
+        margin-left: auto;
     }
 
     /*商品名稱*/
@@ -621,21 +649,115 @@ main{
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    /*商品介紹*/
+
+    /* 商品介紹 */
     .intro {
         padding-left: 5vw;
         padding-right: 5vw;
     }
 
-    /*----------------card2 金流資訊----------*/
+    /* "數量：" */
+    .wrapper li:nth-of-type(3) h3 {
+        margin-bottom: 5px;
+    }
+
+    /* 單價 */
+    .amount li:last-child h3 {
+        letter-spacing: 1px;
+    }
+
+    .num-single {
+        color:#E54343;
+    }
+
+    /* 總價 */
+    .total-cum {
+        margin-bottom: 0;
+        background-color: aliceblue;
+    }
+
+    /*----------------card2 購買人資訊----------*/
 
     .card2 {
         width: 350px;
+        height: 1000px;
+
+        flex-direction: column;
     }
 
+    .card2>li {
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    /* "購買人資訊" */
+    .wra-title {        
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-weight: bold;
+
+        margin-top: 0px;
+
+        background-color: #D6EDFF;
+    }
+
+    /*----統一 表單規格----*/
+    
+    /*表單標題*/
+    .wrapper2 h3 {
+        width: 320px; /* 同表單寬度 */
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+
+    /* 統一 表單尺寸 */
+    .wrapper2 input,
+    .wrapper3>input { 
+        width: 320px;    
+        font-size: 18px;
+
+        margin-bottom: 20px; /*有影響到地址的margin-bottom*/
+    }
+
+    /* 地址 */
+    .address {
+        width: 320px;  /* 同表單寬度 */
+    }
+
+    .address input {
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    /* 郵遞區號 */
+    .address li:first-child input {
+        width: 100px;
+    }
+
+    /* 縣市區 */
+    .address li:nth-of-type(2) input, 
+    .address li:nth-of-type(3) input {
+        width: 100px;
+    }
+
+    /*----------------card2 付款資訊----------*/
+
+    .wrapper3 {
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+
+    /* 付款方式 副標題*/
+    .wrapper3>h3 {
+        text-align: center;
+    }
 }
 
   
 /*-----------------------------------------------------------------*/
 
-@media screen and (max-width:360px) {}
+@media screen and (max-width:360px) {
+    
+}

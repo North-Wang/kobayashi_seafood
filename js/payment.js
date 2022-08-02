@@ -2,28 +2,45 @@
 
 let minus = document.querySelector(".fa-minus"); /* 減少購買的數量 */
 let plus = document.querySelector(".fa-plus"); /* 增加購買的數量 */
-let merch_num = document.querySelector(".number"); /* 購買的數量 */ 
-// console.log(merch_num.innerHTML); /* 購買的數量 內文 */
+
+let merc_num = document.querySelector(".number"); /* 購買的數量 */
+// let merc_num_iner = merc_num.innerHTML; /* 購買的數量 內容 */
+
+let single_num = document.querySelector(".num-single"); /* 單價 */
+// let s_num_iner = single_num.innerHTML; /* 單價 內容 */
+
+let total_num = document.querySelector(".num-total"); /* 總價 */
+// let total_num_iner = total_num.innerHTML; /* 總價 內容 */
 
 //增加數量
 plus.addEventListener("click",function(e){   
     e.preventDefault(); 
-    merch_num.innerHTML++;
-    console.log(merch_num.innerHTML);
+
+    merc_num.innerHTML++;
+
+    let a = parseInt(merc_num.innerHTML); /* 存放"目前購買的數量"。轉成數字 */
+    let b = parseInt(single_num.innerHTML); /* 存放"單價"。轉成數字 */
+
+    total_num.innerHTML = a * b;
+    
 });
 
 //減少數量
 minus.addEventListener("click",function(e){
     e.preventDefault();
-    if(merch_num.innerHTML == 0){
-        
+
+    if(merc_num.innerHTML == 0){        
     }else{
-        merch_num.innerHTML--;
-        console.log(merch_num.innerHTML);
+        merc_num.innerHTML--;
+
+        let b = parseInt(single_num.innerHTML); /* 存放"單價"。轉成數字 */
+
+        total_num.innerHTML = total_num.innerHTML - b ;
     }    
 });
 
 /*------------擇一付款方式-------------*/
+
 let cli_1 = document.querySelector(".radio1");
 let qrcode = document.querySelector(".qrcode");
 let cli_2 = document.querySelector(".radio2");

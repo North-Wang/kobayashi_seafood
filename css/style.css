@@ -298,7 +298,7 @@ footer ul:last-child a:hover {
 
 /*----------------RWD------------------------*/
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
 
     header {
         height: 55px;
