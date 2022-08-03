@@ -195,8 +195,7 @@ main{
 
 /*------社群媒體登入------*/
 
-.wrapper li:nth-of-type(4) button,
-.wrapper li:nth-of-type(5) button { /*統一 社群媒體按鈕*/
+.social-media button { /*統一 社群媒體按鈕*/
     width: 430px;
     height: 45px;    
     border: 0px; /*清除預設邊框設定*/
@@ -339,4 +338,95 @@ main{
 
 .messa button:last-child:hover h3{
     color: white;
+}
+
+/*-----------------------------------------------------------------*/
+
+@media screen and (max-width:428px) {
+    /*-----------分頁共同設定----------*/
+
+    /*分頁標題*/
+    main>h1{ 
+        font-size: 24px;
+    
+        margin: 20px auto;
+    }
+
+    /*副標題、商品名稱*/
+    main h2 { 
+        font-size: 18px;
+    }
+    
+    /*內文*/
+    main h3 { 
+        font-size: 16px;
+    }
+
+    /*----------------------------------*/
+
+    .card {
+        width: 350px;
+    }
+
+    .wrapper {
+        align-items: center; /* 水平置中 */
+    }
+
+    .wrapper li {
+        width: auto; /* 恢復初始設定 */
+    }
+
+    /*統一 各欄位名稱*/
+    .wrapper h3 { 
+        margin-bottom: 5px;
+    }
+
+    /* 統一表單規格 */
+    .wrapper input {
+        width: 320px;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    /* 到"忘記密碼"的距離 */
+    .wrapper li:nth-of-type(2) input {
+        margin-bottom: 10px;
+    }
+
+    /* "忘記密碼" */
+    .text-forgt {
+        font-size: 14px;
+    }
+
+    .wrapper li:nth-of-type(3)::before {
+        width: 73px;
+        left: -77px;
+    }
+
+    .line {
+        letter-spacing: 2px;
+    }
+
+    .wrapper li:nth-of-type(3)::after {
+        width: 75px;
+        right: -77px;
+    }
+
+    /* google 臉書按鈕 */    
+    .social-media button {
+        width: 320px;
+    }
+
+    .wrapper li:nth-of-type(5) button {
+        margin-bottom: 30px;
+    }
+    
+    /* 送出按鈕的容器 */
+    .log {
+        width: 320px;        
+    }
+
+    .log button {
+        width: 155px;
+    }
 }

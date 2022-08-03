@@ -264,7 +264,7 @@ footer ul:first-child i{
     margin-right: 5px;
 }
 
-footer ul:first-child li:nth-child(n+3){ /* 清除社群媒體的hover底線效果 */
+footer ul:first-child li:nth-child(n+5){ /* 清除社群媒體的hover底線效果 */
     border-bottom:0;
 } 
 
@@ -378,11 +378,6 @@ footer ul:last-child a:hover {
         transition: ease 1s; 
     }
 
-        /* 漢堡 */
-    .fa-bars {
-        
-    }
-
     /* 手機版導覽列 */
     .nav-m {
         width: 160px;
@@ -441,7 +436,7 @@ footer ul:last-child a:hover {
     }
     /* 導覽列 */
     footer ul:first-child {
-        width: 300px;
+        width: 100vw;
         flex-wrap: wrap;
 
         margin-top: 30px;

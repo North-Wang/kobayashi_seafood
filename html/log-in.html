@@ -25,12 +25,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
             <!--首頁 Font Awsome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="">
-        <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script>     
+        <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script>
+            <!--搜尋列::after用-->
+        <style id="serch-d"></style>       
     </head>
     <body>
         <header>
             <!--LOGO-->
             <a href="../index.html"><img class="logo" src="../img/icon-logo.svg" alt="LOGO"></a>
+
+            <!--header mobile-->
+            <ul class="wrapper-h">
+                <li>
+                    <a href="../index.html"><img class="logo-m" src="../img/icon-logo-m.svg" alt="LOGO-m"></a>
+                    <img class="logo-m-name" src="../img/homepage/logo-m1.png" alt="小野水產">
+                </li>
+
+                <li>
+                <!--搜尋欄-->
+                    <!-- <div class="wra-searc">
+                        <input type="text">
+                        <button> -->
+                            <i class="fa-solid fa-magnifying-glass fa-lg search-m"></i>
+                    <!-- </button>
+                    </div> -->            
+                    <i class="fa-solid fa-bars"></i>
+                </li>          
+            </ul> 
+
             <div>
                 <!--主選單-->
                 <nav class="nav-l">
@@ -51,7 +73,20 @@
                         <li><a href="./register.html">註冊</a></li>
                     </ul>
                 </nav>
-            </div>        
+            </div>  
+            
+            <!-------Nav Mobile-->
+        
+            <ul class="nav-m">            
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./html/subscribe.html">訂閱方案</a></li>
+                <li><a href="./html/merchandise.html">精選商品</a></li>
+                <li><a href="#">購物車</a></li>
+                <li><a class="en" href="#">Q&A</a></li>
+                <li><a href="./html/log-in.html">登入</a></li>
+                <li><a href="./html/register.html">註冊</a></li>
+            </ul>
+
         </header>
 
         <!-----內容----->
@@ -80,11 +115,11 @@
                     <h3 class="line">或是用以下方法登入</h3>
                 </li>              
 
-                <li> <!--FB登入-->                   
+                <li class="social-media"> <!--FB登入-->                   
                     <button><span class="en">Facebook</span>登入</button>
                 </li>
 
-                <li> <!--谷歌登入--> 
+                <li class="social-media"> <!--谷歌登入--> 
                     <button><span class="en">Google</span>登入</button>
                 </li>               
 
@@ -131,5 +166,6 @@
         </footer>
 
         <script src="../js/log-in.js"></script>
+        <script src="../js/style.js"></script>
     </body>
     </html>

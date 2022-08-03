@@ -1,5 +1,5 @@
 
-/*-------------自動輪播圖 測試-------------*/
+/*-------------自動輪播圖 手刻 測試-------------*/
 
 // let right = document.querySelector(".fa-chevron-circle-right"); /* 右方箭頭 */
 // let left = document.querySelector(".fa-chevron-circle-left"); /* 左方箭頭 */
@@ -43,23 +43,23 @@
 
 /*-------------自動輪播圖 套件 測試-------------*/
 
-$('.owl-carousel').owlCarousel({
-    stagePadding: 50,
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
+// $('.owl-carousel').owlCarousel({
+//     stagePadding: 50,
+//     loop:true,
+//     margin:10,
+//     nav:true,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         600:{
+//             items:3
+//         },
+//         1000:{
+//             items:5
+//         }
+//     }
+// })
 
 /*-------------時間倒數器-------------*/
 

@@ -392,10 +392,22 @@ main{
         width: auto; /* 恢復初始設定 */
     }
 
+    /*統一 各欄位名稱*/
+    .wrapper h3 { 
+        margin-bottom: 5px;
+    }
+
     /* 統一表單規格 */
     .wrapper input {
         width: 320px;
-        font-size: 17px;
+        letter-spacing: 2px;
+        font-size: 15px;
+    }
+
+    /* 按鈕 */
+    .wrapper li:nth-of-type(3) button,
+    .wrapper li:nth-of-type(4) button {
+        font-size: 15px;
     }
 
     /* 統一 生日性別欄位表單 */
@@ -412,4 +424,28 @@ main{
     .sex input {
         width: auto; /* 讓單選框的大小恢復原本設定*/
     }
+
+    .sex h3 {
+        margin-top: -7px;
+    }
+    
+    /*-----訂閱按鈕-----*/
+    .sub input {
+        margin-right: 5px;
+    }
+
+    /*-----彈出訊息-----*/
+    .messa {
+        width: 250px;
+        border-radius: 5px;
+    }
+
+    .messa button{
+        width: 170px;
+        border-radius: 5px;
+    }
 }
+
+/*-----------------------------------------------------------------*/
+
+@media screen and (max-width:360px) {}
