@@ -402,6 +402,7 @@ footer ul:last-child a:hover {
     
     .nav-m li a{
         display: block;
+        font-size: 16px;
 
         margin-left: 42px;
         margin-right: 30px;
@@ -432,16 +433,21 @@ footer ul:last-child a:hover {
     footer {
         align-items: center;
 
-        padding-bottom: 70px;
+        padding-bottom: 35px;
     }
     /* 導覽列 */
     footer ul:first-child {
         width: 100vw;
         flex-wrap: wrap;
 
-        margin-top: 30px;
+        /* margin-top: -2s0px; */
         margin-bottom: 30px;
     }
+
+    /* 導覽列 li
+    footer ul:first-child li {
+        height: 48px;
+    }  */
 
     /* 導覽列 文字 */
     footer ul:first-child a {
@@ -456,10 +462,11 @@ footer ul:last-child a:hover {
 
     /* 版權資訊 */
     footer h3 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     footer small {
+        font-size: 15px;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -467,4 +474,9 @@ footer ul:last-child a:hover {
 
  /*-----------------------------------------------------------------*/
 
- @media screen and (max-width:360px) {}
+ @media screen and (max-width:360px) {
+    /* 導覽列 li*/
+    footer ul:first-child li {
+        height: 48px;
+    }
+ }

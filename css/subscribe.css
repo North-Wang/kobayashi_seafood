@@ -218,6 +218,67 @@ main>h3 {
         font-size: 16px;
     }
 
-    /*----------------card1 商品明細----------*/
+    /*------------------------*/
 
+    /* 分頁簡介 */
+    main>h3 {
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;        
+    }
+
+    .wrapper {
+        flex-direction: column;
+
+        margin-bottom: 0px;
+    }
+
+    .wrapper>li {
+        width: 310px;
+        height: 150px;
+        align-items: start;
+
+        margin-bottom: 25px;
+    }
+
+    /* 方案標題 */
+    .wrapper h2 {
+        margin-top: 10px;
+        margin-left: 12px;
+    }
+
+    /* 適合人數 */
+    .people {
+        margin-top: 6px;
+        margin-left: 11px;
+    }
+
+    /* 插圖A */
+    .plana img {
+        height: 105px;
+        left: 144px;
+        top: 9px;
+    }
+
+    /* 插圖B */
+    .planb img {        
+        height: 144px;
+        top: 16px;
+        left: 137px;
+    }
+
+    /* 插圖C */
+    .planc img {
+        height: 132px;
+        top: 30px;
+        left: 132px;
+    }
+
+    /* 按鈕 */
+    .wrapper>li h3:last-child {
+        height: 35px;
+        line-height: 35px;
+
+        z-index: 2;
+    }
 }

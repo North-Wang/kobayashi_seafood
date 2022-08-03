@@ -1,10 +1,15 @@
 
 /*-------------自動輪播圖 手刻 測試-------------*/
 
-// let right = document.querySelector(".fa-chevron-circle-right"); /* 右方箭頭 */
-// let left = document.querySelector(".fa-chevron-circle-left"); /* 左方箭頭 */
+let right = document.querySelector(".fa-chevron-circle-right"); /* 右方箭頭 */
+let left = document.querySelector(".fa-chevron-circle-left"); /* 左方箭頭 */
 
-// let wrap_slide = document.querySelector(".wrap-slide") /* slide容器 */
+let wrap_slide = document.querySelector(".wrap-slide"); /* slide外框容器 */
+let slide_count = $('.slide').length; //計算有多少張slide
+
+
+let slide_width = wrap_slide.clientWidth(); //計算slide外框容器的寬度
+console.log(slide_width);
 
 // // console.log(window.innerWidth);
 // right.addEventListener("click",function(){
