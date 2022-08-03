@@ -98,7 +98,8 @@ main h3{ /*最新消息 發文時間*/
 /*魚類照片*/
 .cover-fish{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-left: 39rem; /* 讓第二張slide保持在中間 */
 }
 
 .cover-fish li{
@@ -587,6 +588,11 @@ main h3{ /*最新消息 發文時間*/
         font-size: 16px;
         line-height: 30px; /* 和button height相同*/
         letter-spacing: 4px;
+    }
+
+    /* slide容器*/
+    .cover-fish {
+        margin-left: 23rem; /* 讓第二張slde保持在中間*/
     }
 
     /*魚類照片*/

@@ -211,14 +211,17 @@ main{
     margin-bottom: 10px; /*覆蓋原本設定*/
 }
 
+/* 西元年 */
 .birth input:first-child {
     width: 100px;
 }
 
+/* 月份 */
 .birth input:nth-of-type(2) {
     width: 90px;
 }
 
+/* 日期 */
 .birth input:nth-of-type(3) {
     width: 90px;
 }
@@ -382,12 +385,27 @@ main{
     }
 
     .wrapper {
+        align-items: center; /* 水平置中 */
+    }
 
+    .wrapper li {
+        width: auto; /* 恢復初始設定 */
     }
 
     /* 統一表單規格 */
     .wrapper input {
         width: 320px;
+        font-size: 17px;
+    }
+
+    /* 統一 生日性別欄位表單 */
+    .birth {
+        width: 320px; 
+        justify-content: space-between;
+    }
+
+    .birth input {
+        margin-right: 0px;
     }
 
     /* 性別 單選 */

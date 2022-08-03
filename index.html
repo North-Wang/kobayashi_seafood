@@ -29,6 +29,14 @@
     <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script>     
         <!--搜尋列::after用-->
     <style id="serch-d"></style>
+        <!--slick套件-->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+        <!--slick套件-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"> -->
+        <!--OWL套件-->
+    <link rel="stylesheet" href="./vender/owl.carousel.js">
+    <link rel="stylesheet" href="./vender/owl.theme.default.css">
 </head>
 <body>
     <header>
@@ -101,17 +109,17 @@
                 <li><i class="fa fa-chevron-circle-left left"></i></li>
                 <li><i class="fa fa-chevron-circle-right right"></i></li>
             </ul>          
-            <ul class="cover-fish">
-                <li>
+            <ul class="cover-fish wrap-slide owl-carousel">
+                <li class="slide item">
                     <div class="mask"></div>
                     <h1 class="fish-name">午仔魚</h1>
                     <img src="img/homepage/fish4.jpg" alt="魚類照片">
                 </li>
-                <li>
-                    <h1 class="fish-name">鱸魚</h1>
+                <li class="slide item">
+                    <h1 class="fish-name center">鱸魚</h1>
                     <img src="img/homepage/fish1.jpg" alt="魚類照片">
                 </li>
-                <li>
+                <li class="slide item">
                     <div class="mask"></div>
                     <h1 class="fish-name">吳郭魚</h1>
                     <img src="img/homepage/fish5.jpg" alt="魚類照片">
@@ -225,10 +233,18 @@
             <small>&copy;本網站為緯育TibaMe前端設計工程師班第78期學員專題作品，本平台僅供學習、展示之用。 </small>
             <a href="reference.html"><h3>參考資料</h3></a>
         </ul>   
-    </footer>
-
+    </footer>    
+        <!--OWL-->
+    <script src="./vender/jquery.min.js"></script>
+    <script src="./vender/owl.carousel.min.js"></script>
+        <!--slick套件--> 
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./vender/slick-1.8.1/slick/slick.min.js"></script> -->
+        <!--js-->
     <script src="./js/style.js"></script>
-    <script src="./js/homepage.js"></script>
+    <script src="./js/homepage.js"></script>        
+        
+        
 </body>
 </html>
 

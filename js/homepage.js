@@ -1,15 +1,37 @@
 
-/*-------------自動輪播圖-------------*/
+/*-------------自動輪播圖 測試-------------*/
 
-// const wrap_slide = document.getElementsByClassName("wrap-slide")[0];
-//     console.log(wrap_slide);
-//     //確認有幾張slide
-// const slide = document.getElementsByClassName("slidef");
-//     console.log(slide.length);
-// const length_slid = slide.length;
+// let right = document.querySelector(".fa-chevron-circle-right"); /* 右方箭頭 */
+// let left = document.querySelector(".fa-chevron-circle-left"); /* 左方箭頭 */
 
+// let wrap_slide = document.querySelector(".wrap-slide") /* slide容器 */
 
-//     //間隔幾秒切換slide
+// // console.log(window.innerWidth);
+// right.addEventListener("click",function(){
+//     wrap_slide.setAttribute("style","transform:translate(-600px,0)"); /* 容器往左移 */
+// });
+
+// left.addEventListener("click",function(){
+//     wrap_slide.setAttribute("style","transform:translate(600px,0)"); /* 容器往右移 */
+// });
+
+// //RWD
+
+// let windw_wid = window.innerWidth;
+// let a = parseInt(windw_wid + "px");
+// if( window.innerWidth < 428 ){
+//     right.addEventListener("click",function(){
+//         wrap_slide.setAttribute("style","transform:translate(414px,0)"); /* 容器往左移 */
+//         console.log("R");
+//     });
+    
+//     left.addEventListener("click",function(){
+//         wrap_slide.setAttribute("style","transform:translate(-414px,0)"); /* 容器往右移 */
+//         console.log("L");
+//     });
+// } 
+
+    //間隔幾秒切換slide
 // setInterval(function(){
 //      for(i = 0; i < slide.length; i++){
 //         let a = 0;
@@ -18,8 +40,26 @@
 //      };   
     
 // },1000);
- 
 
+/*-------------自動輪播圖 套件 測試-------------*/
+
+$('.owl-carousel').owlCarousel({
+    stagePadding: 50,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
 
 /*-------------時間倒數器-------------*/
 
