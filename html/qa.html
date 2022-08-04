@@ -25,14 +25,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
             <!--首頁 Font Awsome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="">
-        <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script>     
+        <script src="https://kit.fontawesome.com/1ded507973.js" crossorigin="anonymous"></script> 
+            <!--搜尋列::after用-->
+        <style id="serch-d"></style>    
     </head>
     <body>
         <header>
             <!--LOGO-->
             <a href="../index.html"><img class="logo" src="../img/icon-logo.svg" alt="LOGO"></a>
-            <div>
-                <!--主選單-->
+
+            <!--header mobile-->
+            <ul class="wrapper-h">
+                <li>
+                    <a href="../index.html"><img class="logo-m" src="../img/icon-logo-m.svg" alt="LOGO-m"></a>
+                    <img class="logo-m-name" src="../img/homepage/logo-m1.png" alt="小野水產">
+                </li>
+    
+                <li>
+                <!--搜尋欄-->
+                <!-- <div class="wra-searc">
+                    <input type="text">
+                    <button> -->
+                        <i class="fa-solid fa-magnifying-glass fa-lg search-m"></i>
+                    <!-- </button>
+                </div> -->            
+                <i class="fa-solid fa-bars"></i>
+                </li>          
+            </ul>      
+
+            <!--主選單-->
+            <div>                
                 <nav class="nav-l">
                     <ul>
                         <li><a href="../index.html">首頁</a></li>
@@ -51,7 +73,17 @@
                         <li><a href="./register.html">註冊</a></li>
                     </ul>
                 </nav>
-            </div>        
+            </div>
+            
+            <ul class="nav-m">            
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./html/subscribe.html">訂閱方案</a></li>
+                <li><a href="./html/merchandise.html">精選商品</a></li>
+                <li><a href="#">購物車</a></li>
+                <li><a class="en" href="#">Q&A</a></li>
+                <li><a href="./html/log-in.html">登入</a></li>
+                <li><a href="./html/register.html">註冊</a></li>
+            </ul> 
         </header>
     
         <!-----內容----->
@@ -61,18 +93,37 @@
 
             <ul class="wrapper">
                 <li>
-                    <h2><span class="en">Q</span><span class="num">1</span>：運送範圍有哪些地區?</h2>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <div class="question">
+                        <h2><span class="en">Q</span><span class="num">1</span>：運送範圍有哪些地區?</h2>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="answer">
+                        <h2 class="ans-A"><span class="en">A</span> ：</h2>
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque aut debitis natus hic sed libero et odio ipsa optio ad iusto consequuntur suscipit, voluptates voluptatem assumenda adipisci dignissimos! Omnis, porro.</h3>
+                    </div>       
                 </li>
                 <li>
-                    <h2><span class="en">Q</span><span class="num">2</span>：鮮魚保存期限有多久?</h2>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <div class="question">
+                        <h2><span class="en">Q</span><span class="num">2</span>：鮮魚保存期限有多久?</h2>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="answer">   
+                        <h2 class="ans-A"><span class="en">A</span>：</h2>                     
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque aut debitis natus hic sed libero et odio ipsa optio ad iusto consequuntur suscipit, voluptates voluptatem assumenda adipisci dignissimos! Omnis, porro.</h3>
+                    </div>
                 </li>
                 <li>
-                    <h2><span class="en">Q</span><span class="num">3</span>：</h2>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <div class="question">
+                        <h2><span class="en">Q</span><span class="num">3</span>：運送範圍有哪些地區?</h2>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="answer">
+                        <h2 class="ans-A"><span class="en">A</span> ：</h2>
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque aut debitis natus hic sed libero et odio ipsa optio ad iusto consequuntur suscipit, voluptates voluptatem assumenda adipisci dignissimos! Omnis, porro.</h3>
+                    </div>
                 </li>
             </ul>
+            
         </main>
         
         <!-----頁尾----->
@@ -95,6 +146,7 @@
             </ul>   
         </footer>
 
-        <script src="../js/payment.js"></script>
+        <script src="../js/style.js"></script>
+        <script src="../js/qa.js"></script>
     </body>
     </html>

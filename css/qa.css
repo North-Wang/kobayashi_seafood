@@ -80,12 +80,12 @@ main{
     position: relative;
 }
 
+/* 統一 main的寬度 */
 .wrapper {
     width: 700px;    
 }
 
-.wrapper>li{ /*統一 題目欄位尺寸*/
-    width: 100%;
+.question { /*統一 題目欄位尺寸*/
     height: 45px;
     line-height: 45px;
     border-radius: 5px;
@@ -96,19 +96,56 @@ main{
 
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 30px; /*問題之間的距離*/
+    margin-bottom: 0px; /* 開啟答案之後的距離 */
+    /* margin-bottom: 30px; 問題之間的距離 */
     background-color: #5FBBFF;
 }
 
-/*題目 文字設定*/
-.wrapper>li h2 {
+/*問題 文字設定*/
+.question h2 {
     font-size: 18px;
     font-family:'Noto Sans JP';
     text-align: left;
 }
 
+.question>h2 span:first-child {
+    letter-spacing: 1px;
+}
+
 /*font awsome*/
-.wrapper>li i {
+.question i {
     font-size: 28px;
     line-height: 45px;
 }
+
+/* 統一 回答欄位設定 */
+.answer {
+    display: flex;
+   
+    margin-bottom: 25px;
+}
+
+/* "A:" */
+.ans-A {
+    width: 180px;
+    font-size: 18px;
+    letter-spacing: normal;
+
+    padding-top: 18px;
+    padding-left: 28px; 
+
+    background-color: white;
+}
+
+.answer h3 {
+    text-align: left;
+
+    padding-top: 12px;
+    padding-right: 15px; /* 和ans-A搭配 */
+    
+    padding-bottom: 25px;
+    /* margin-bottom: 50px; */
+
+    background-color: white;
+}
+

@@ -99,7 +99,10 @@ main h3{ /*最新消息 發文時間*/
 .cover-fish{
     display: flex;
     /* justify-content: center; */
-    margin-left: 39rem; /* 讓第二張slide保持在中間 */
+
+    /* 讓第二張slide保持在中間 */
+    /* margin-left: 39rem;  */
+    margin-left:0vw;
 }
 
 .cover-fish li{

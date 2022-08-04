@@ -4,21 +4,58 @@
 let right = document.querySelector(".fa-chevron-circle-right"); /* 右方箭頭 */
 let left = document.querySelector(".fa-chevron-circle-left"); /* 左方箭頭 */
 
-let wrap_slide = document.querySelector(".wrap-slide"); /* slide外框容器 */
+let wrap_slide = document.querySelector(".cover-fish"); /* slide外框容器 */
+let slide = document.querySelectorAll(".slide"); /* 找到所有slide元素 */
 let slide_count = $('.slide').length; //計算有多少張slide
+console.log(slide_count);
+
+let s1 = document.querySelector("s1");
+let slide_wid = slide[1].clientWidth; //計算第一個.slide的寬度 
+// console.log(slide_wid);
+
+let wraslide_width = wrap_slide.offsetWidth; //計算wrape-slide的寬度
+// console.log(slide_width); //印出wrap-slide寬度
+// console.log(slide_count); //計算有多少張slide
+//且slide之間距離20px
+
+let index = 0;
+let x = 1;
+
+//調整.wrape-slide的初始位置
+if(window.innerWidth > 1000){ //當螢幕寬度大於1000px時，才執行
+    wrap_slide.style.marginLeft = (slide_count - 3)*38.7 + 'rem'; //根據slide數量調整初始位置
+    console.log(wrap_slide.style.marginLeft);
+}
 
 
-let slide_width = wrap_slide.clientWidth(); //計算slide外框容器的寬度
-console.log(slide_width);
 
-// // console.log(window.innerWidth);
-// right.addEventListener("click",function(){
-//     wrap_slide.setAttribute("style","transform:translate(-600px,0)"); /* 容器往左移 */
-// });
 
-// left.addEventListener("click",function(){
-//     wrap_slide.setAttribute("style","transform:translate(600px,0)"); /* 容器往右移 */
-// });
+//右鍵 綁定click事件
+$(right).click(function(){
+    //移動wrap_slide來達到輪播效果
+    $(wrap_slide).animate({        
+        marginLeft:slide_wid * x + 20        
+    })
+    console.log($(wrap_slide)[0].style.marginLeft)
+    if(x < slide_count){
+        x = x + 1
+    }else{
+        x = 0
+    }    
+    $(".wrap-slide").append($(".wrap-slide").find(`li:nth-child(${x})`).clone(true));
+    $("li:first-child").remove('.wrap-slide');
+});
+
+$(left).click(function(){
+    $(wrap_slide).animate({
+        marginRight:slide_wid * x + 20
+    })
+    x = x - 1
+    $(".wrap-slide").append($(".wrap-slide").find('li:last').clone(true));  
+    $(".wrap-slide").remove($(".wrap-slide").find('li:first'));  
+});
+
+
 
 // //RWD
 
@@ -34,17 +71,7 @@ console.log(slide_width);
 //         wrap_slide.setAttribute("style","transform:translate(-414px,0)"); /* 容器往右移 */
 //         console.log("L");
 //     });
-// } 
-
-    //間隔幾秒切換slide
-// setInterval(function(){
-//      for(i = 0; i < slide.length; i++){
-//         let a = 0;
-//         wrap_slide.setAttribute("style","margin-left:" + a + "px");
-//         a++;
-//      };   
-    
-// },1000);
+// }    
 
 /*-------------自動輪播圖 套件 測試-------------*/
 
