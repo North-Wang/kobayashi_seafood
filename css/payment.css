@@ -759,5 +759,29 @@ main{
 /*-----------------------------------------------------------------*/
 
 @media screen and (max-width:360px) {
-    
+    /* 商品資訊 */
+    .card1 {
+        width: 315px;
+    }
+    .wrapper2 input, .wrapper3>input {
+        width: 320px;
+        font-size: 15px;
+    }
+    .wrapper2 input, .wrapper3>input {
+        width: 290px;
+    }
+    .wrapper2 h3 {
+        width: 290px;
+    }
+    .address {
+        width: 290px;
+    }
+    .address li:first-child input {
+        width: 80px;
+    }
+
+    /* 付款人資訊 */
+    .card2 {
+        width: 315px;
+    }
 }

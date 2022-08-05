@@ -68,6 +68,7 @@ main h3{ /*最新消息 發文時間*/
     z-index: 5;
 }
 
+/* 箭頭符號 */
 .arrow i{
     font-size: 30px;
     width: 40px;
@@ -75,8 +76,26 @@ main h3{ /*最新消息 發文時間*/
     color: #18264B;
 
     opacity: 80%;
+
+    position: relative;
 }
 
+/* 箭頭符號底色 */
+.arrow div{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    z-index: -1;
+}
 .arrow i:hover {
     color: #050911;
 }
@@ -835,4 +854,8 @@ main h3{ /*最新消息 發文時間*/
 
  /*-----------------------------------------------------------------*/
 
- @media screen and (max-width:360px) {}
+ @media screen and (max-width:360px) {
+    .arrow {
+        width: 39rem;
+    }
+ }
