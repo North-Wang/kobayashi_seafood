@@ -617,7 +617,8 @@ main h3{ /*最新消息 發文時間*/
     /* 箭頭 容器*/
     .arrow {
         min-width: 30rem;
-        width: 46rem;        
+        width: 46rem;   
+        top: 43%;     
     }
     /* 箭頭 icon*/
     .arrow i{

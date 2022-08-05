@@ -1,5 +1,4 @@
-
-/*-------------自製 自動輪播圖  測試-------------*/
+/*-------------自製 自動輪播圖-------------*/
 
 let right = document.querySelector(".fa-chevron-circle-right"); //右方箭頭
 let left = document.querySelector(".fa-chevron-circle-left"); //左方箭頭
@@ -20,88 +19,106 @@ let slide_wid = slide[1].clientWidth; //計算第一個.slide的寬度
 
 let wraslide_width = wrap_slide.offsetWidth; //計算wrape-slide的寬度
     // console.log(slide_width); //印出wrap-slide寬度
-    // console.log(slide_count); //計算有多少張slide
-
-//調整.wrape-slide的初始位置
-if(window.innerWidth > 1000){ //當螢幕寬度大於1000px時，才執行
-    wrap_slide.style.marginLeft = (slide_count - 3)*38.7 + 'rem'; //根據slide數量調整初始位置
-    // console.log(wrap_slide.style.marginLeft); //印出初始wrape-slide的margin-left數值
-}
 
 let x = 1;
 
-/*---右鍵 切換slide---*/
-/*---移動wrap_slide來達到輪播效果---*/
-right.addEventListener("click",function(){
-    console.log(slide_count - 1);
-        // wrap_slide.style.marginLeft = 38.75 + 'rem'; //4張 讓slide2調整保持在畫面中間
-        // wrap_slide.style.marginLeft = 77.5 + 'rem'; //5張 讓slide2調整保持在畫面中間
-        // wrap_slide.style.marginLeft = 116.25 + 'rem'; //6張 讓slide2調整保持在畫面中間
-        // wrap_slide.style.marginLeft = 155 + 'rem'; //7張 讓slide2調整保持在畫面中間
-    wrap_slide.style.marginLeft = (slide_count - 1)*38.75 + 'rem'; //根據slide張數自動調整
-        // console.log("margin-left：" + wrap_slide.style.marginLeft); //印出指定距離
-    
+//調整.wrape-slide的初始位置
+if(window.innerWidth > 500){ //當螢幕寬度大於1000px時，才執行
+    wrap_slide.style.marginLeft = (slide_count - 3)*38.75 + 'rem'; //根據slide數量調整初始位置
+    // console.log(wrap_slide.style.marginLeft); //印出初始wrape-slide的margin-left數值
+
+    /*---右鍵 切換slide---*/
+    right.addEventListener("click",function(){
+            // wrap_slide.style.marginLeft = 38.75 + 'rem'; //4張 讓slide2調整保持在畫面中間
+            // wrap_slide.style.marginLeft = 77.5 + 'rem'; //5張 讓slide2調整保持在畫面中間
+            // wrap_slide.style.marginLeft = 116.25 + 'rem'; //6張 讓slide2調整保持在畫面中間
+            // wrap_slide.style.marginLeft = 155 + 'rem'; //7張 讓slide2調整保持在畫面中間
+        wrap_slide.style.marginLeft = (slide_count - 3)*38.75 + 'rem'; //根據slide張數自動調整
+            // console.log("margin-left：" + wrap_slide.style.marginLeft); //印出指定距離
+
     /* 複製、刪除li */
-        // console.log("現在的x為:" + x);
-    wrap_slide.insertAdjacentHTML("beforeend",wrap_slide.firstElementChild.outerHTML); //複製第一張slide到最右邊    
-    wrap_slide.removeChild(wrap_slide.firstElementChild); //刪除第一個li
-    
+            // console.log("現在的x為:" + x);
+        wrap_slide.insertAdjacentHTML("beforeend",wrap_slide.firstElementChild.outerHTML); //複製第一張slide到最右邊    
+        wrap_slide.removeChild(wrap_slide.firstElementChild); //刪除第一個li
+
     /* 限制x範圍 */
-    if(x < slide_count -1 ){
-        x++;
-    }else{
+        if(x < slide_count -1 ){
+            x++;
+        }else{
+            x = 1;
+            wrap_slide.style.marginLeft = (slide_count - 3)*38.7 + 'rem'; //根據slide數量調整初始位置
+        }
+    });  
+
+    /*---左鍵 切換slide---*/
+    left.addEventListener("click",function(){
+        wrap_slide.style.marginLeft = (slide_count - 3)*38.75 + 'rem'; //根據slide張數自動調整
+
+    /* 複製、刪除li */
+        wrap_slide.insertAdjacentHTML("afterbegin",wrap_slide.lastElementChild.outerHTML); //複製最後一張slide到最左邊    
+        wrap_slide.removeChild(wrap_slide.lastElementChild); //刪除最後一個li
+
+    /* 限制x範圍 */
+        if(x > 0 ){
+            x--;
+        }else{
         x = 1;
         wrap_slide.style.marginLeft = (slide_count - 3)*38.7 + 'rem'; //根據slide數量調整初始位置
-    }
-    console.log("下一個x為:" + x);
-});  
+        }
+    });
+};
 
-/*---左鍵 切換slide---*/
-$(left).click(function(){
-    
-});
+/*-------------自製 自動輪播圖(手機版)----*/
+
+if(window.innerWidth <= 500){
+        // wrap_slide.style.marginLeft = 45.6 + 'rem'; //5張 讓slide2調整保持在畫面中間
+        // wrap_slide.style.marginLeft = 68.4 + 'rem'; //6張 讓slide2調整保持在畫面中間
+    wrap_slide.style.marginLeft = (slide_count - 3)*22.8 + 'rem'; //根據slide張數自動調整
+
+    /*---右鍵 切換slide---*/
+    right.addEventListener("click",function(){        
+        wrap_slide.style.marginLeft = 45.6 + 'rem'; //5張 讓slide2調整保持在畫面中間
+            // wrap_slide.style.marginLeft = 68.4 + 'rem'; //6張 讓slide2調整保持在畫面中間
+        wrap_slide.style.marginLeft = (slide_count - 3)*22.8 + 'rem'; //根據slide張數自動調整
+
+    /* 複製、刪除li */
+        console.log("現在的x為:" + x);
+        wrap_slide.insertAdjacentHTML("beforeend",wrap_slide.firstElementChild.outerHTML); //複製第一張slide到最右邊    
+        wrap_slide.removeChild(wrap_slide.firstElementChild); //刪除第一個li
+        
+    /* 限制x範圍 */
+        if(x < slide_count -1 ){
+            x++;
+        }else{
+            x = 1;
+            // wrap_slide.style.marginLeft = 45.6 + 'rem'; //5張 讓slide2調整保持在畫面中間
+            // wrap_slide.style.marginLeft = 68.4 + 'rem'; //6張 讓slide2調整保持在畫面中間
+            wrap_slide.style.marginLeft = (slide_count - 3)*22.8 + 'rem'; //根據slide張數自動調整            
+        }
+        // console.log("下一張x為:" + x);
+    });
+
+    /*---左鍵 切換slide---*/
+    left.addEventListener("click",function(){
+        wrap_slide.style.marginLeft = (slide_count - 3)*22.8 + 'rem'; //根據slide張數自動調整
+
+    /* 複製、刪除li */
+        wrap_slide.insertAdjacentHTML("afterbegin",wrap_slide.lastElementChild.outerHTML); //複製最後一張slide到最左邊    
+        wrap_slide.removeChild(wrap_slide.lastElementChild); //刪除最後一個li
+
+    /* 限制x範圍 */
+        if(x > 0 ){
+            x--;
+        }else{
+            x = 1;
+            wrap_slide.style.marginLeft = (slide_count - 3)*22.8 + 'rem'; //根據slide張數自動調整
+        }
+    });
+};
 
 
 
-
-
-// //RWD
-
-// let windw_wid = window.innerWidth;
-// let a = parseInt(windw_wid + "px");
-// if( window.innerWidth < 428 ){
-//     right.addEventListener("click",function(){
-//         wrap_slide.setAttribute("style","transform:translate(414px,0)"); /* 容器往左移 */
-//         console.log("R");
-//     });
-    
-//     left.addEventListener("click",function(){
-//         wrap_slide.setAttribute("style","transform:translate(-414px,0)"); /* 容器往右移 */
-//         console.log("L");
-//     });
-// }    
-
-/*-------------自動輪播圖 套件 測試-------------*/
-
-// $('.owl-carousel').owlCarousel({
-//     stagePadding: 50,
-//     loop:true,
-//     margin:10,
-//     nav:true,
-//     responsive:{
-//         0:{
-//             items:1
-//         },
-//         600:{
-//             items:3
-//         },
-//         1000:{
-//             items:5
-//         }
-//     }
-// })
-
-/*-------------時間倒數器-------------*/
+/*-------------時間倒數器-----------------*/
 
 //設定初始時間(小時) 
 let time_star_hr = 6;
