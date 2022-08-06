@@ -690,7 +690,6 @@ main{
 
     .card2 {
         width: 350px;
-        height: 1000px;
 
         flex-direction: column;
         align-items: center;
@@ -771,11 +770,38 @@ main{
     /* 付款方式 副標題*/
     .wrapper3>h3 {
         text-align: center;
+        margin-bottom: 20px;
     }
 
     /* 信用卡資訊 */
     .visa-detail {
         z-index: 1;
+    }
+
+    .linepay {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .icon-linepay {
+        height: 25px;
+    }
+
+    .qrcode {
+        margin-left: 22px;
+    }
+
+    .visa {
+        margin-left: 10px;
+    }
+
+    .icon-visa {
+        height: 25px;
+        
+    }
+
+    .visa-detail {
+        margin-left: 38px;
     }
 }
 
