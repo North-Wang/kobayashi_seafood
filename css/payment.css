@@ -264,21 +264,24 @@ main{
 /*----------card2 購買人資訊、金流---------*/
 
 .card2 {
-    display: flex;
     width: 1000px; /*card2寬度*/
-
-    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
     box-shadow: 1px 1px 10px rgb(135, 135, 135);
     border-radius: 10px;
     overflow: hidden; /*裁切多餘的部分*/
 
     position: relative; /*送出按鈕 定位用*/
+
+    background-color: white;
 }
 
-.card2>li{ /*控制兩測的長寬*/
+/*控制兩側的長寬*/
+.card2>li:first-child,
+.card2>li:nth-of-type(2) { 
     width: 50%;
 
-    padding-bottom: 165px; /*到card2底部的距離*/
+    padding-bottom: 75px; /*到送出按鈕的距離*/
 } 
 
 /*-----購買人資訊-----*/
@@ -316,11 +319,12 @@ main{
 
 /*-----付款資訊-----*/
 
-.card2>li:last-child {    
+.card2>li:nth-of-type(2) {    
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 .wrapper3{ /*右側排版*/
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -463,9 +467,15 @@ main{
 }
 
 /*送出按鈕*/
+.card2>li:last-child{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+}
 .submit{ /*設定和首頁的下訂按鈕相同*/
     background-color: #5FBBFF;
-    width: 255px;
+    /* width: 255px; */
+    width: 225px;
     height: 50px;
     border-radius: 10px;
     border: 0px; /*清除預設邊框設定*/
@@ -478,11 +488,11 @@ main{
     font-weight: bold;
     letter-spacing:10px;
 
-    position: absolute;
+    /* position: absolute;
     left: 0;
     right: 0;
     bottom: 45px;
-    margin: auto;
+    margin: auto; */
 
     z-index: 1;
 }
@@ -683,6 +693,13 @@ main{
         height: 1000px;
 
         flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .card2>li:first-child, 
+    .card2>li:nth-of-type(2) {
+        width: 100%;
     }
 
     .card2>li {
@@ -724,6 +741,8 @@ main{
     /* 地址 */
     .address {
         width: 320px;  /* 同表單寬度 */
+        
+        margin-bottom: -75px;
     }
 
     .address input {
@@ -752,6 +771,11 @@ main{
     /* 付款方式 副標題*/
     .wrapper3>h3 {
         text-align: center;
+    }
+
+    /* 信用卡資訊 */
+    .visa-detail {
+        z-index: 1;
     }
 }
 
