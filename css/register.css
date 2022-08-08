@@ -53,12 +53,18 @@ main h4{ /*警告訊息 專用*/
     color: #E54343;
 }
 
-.alert{ /*關閉警告訊息*/
-    display: none;
+/*警告訊息*/
+.alert{ 
+    display: none;    
 }
 
 .alert-im{ 
     color: #E64344;
+}
+
+/*開啟警告訊息用*/
+.-on{
+    display: block;
 }
 
 .must{ /*資料必填符號*/
@@ -125,26 +131,35 @@ main{
 
 .wrapper li{
     width: 435px;
+    position: relative;
 }
 
-.wrapper input { /*統一 表單規格*/
+/*統一 表單規格*/
+.wrapper input { 
     width: 430px;    
     height: 45px;
     font-size: 18px;
     border-radius: 5px;
     border: 0.1px solid gray;
-    
+
     padding-left: 10px; /*框格內文字padding lft*/
     box-sizing: border-box; /*避免長寬爆掉*/
     margin-bottom: 30px;
 }
 
-.wrapper h3 { /*統一 各欄位名稱*/
+/*統一 各欄位名稱*/
+.wrapper h3 { 
     display: block;
     width: 100%;
     text-align: left;
 
     margin-bottom: 10px;
+}
+
+/*統一 警告訊息規格*/
+.wrapper .alert{
+    position: absolute;
+    top:93px ;
 }
 
 /*手機 送出按鍵*/
@@ -174,7 +189,6 @@ main{
 }
 
 /*簡訊驗證碼 按鈕*/
-
 .wrapper li:nth-of-type(4) {
     position: relative; /*送出按鍵 定位用*/
 } 
