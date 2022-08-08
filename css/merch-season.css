@@ -1,0 +1,96 @@
+/*-----分頁共同的設定------*/
+
+main>h1{ /*分頁標題*/
+    display: block;
+
+    font-size: 34px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 600;
+
+    margin: 50px auto;
+}
+
+main h2 { /*副標題、商品名稱*/
+    font-size: 28px;
+    font-family:'Noto Serif JP';
+    letter-spacing:4px; /*微調。字距*/
+    color: black;
+    text-align: center;
+    font-weight: 400;
+}
+
+main h3 { /*內文*/
+    font-size: 18px;
+    font-family:'Noto Sans JP';
+    letter-spacing:3px; /*微調。字距*/
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+} 
+
+.wra-title{ /*h2標題文字*/
+    margin-top: 40px;
+
+    display: block;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+main .num { /*內文的數字字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main .en{ /*內文的英文字型*/
+    font-family: 'Roboto', sans-serif;
+}
+
+main h4{ /*警告訊息 專用*/
+    font-size: 16px;
+    color: #E54343;
+}
+
+.alert{ /*關閉警告訊息*/
+    display: none;
+}
+
+.must{ /*資料必填符號*/
+    color: red;
+}
+
+input:focus { /*統一 表單focus*/
+    background-color: rgb(231, 231, 231);
+    border: 0.1px solid gray;
+}
+
+/*----------統一設定----------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #C2D6F1;
+
+    padding-bottom: 150px; /*與頁尾的距離*/
+
+    position: relative;
+}
+
+/*----------個別設定----------*/
+
+section{
+    width: 800px;
+    height: 300px;
+    background-color: aquamarine;
+}
+
+
+/*魚類照片*/
+section img{
+    display: block;
+    width: 300px;
+}

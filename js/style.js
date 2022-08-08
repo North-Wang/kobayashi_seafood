@@ -33,3 +33,16 @@ search_m.addEventListener("click", function(){
         // console.log("open");
     }    
 });
+
+/*-------------點擊購物車-------------*/
+
+let shoppcart = document.querySelector(".fa-cart-shopping");
+let shoppcart_m = document.querySelector(".cart-m");
+
+shoppcart.addEventListener("click",function(){
+    alert("測試版尚未開通此功能，敬請期待!");
+});
+
+shoppcart_m.addEventListener("click",function(){
+    alert("測試版尚未開通此功能，敬請期待!");
+});

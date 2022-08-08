@@ -393,7 +393,7 @@ main h3{ /*最新消息 發文時間*/
     position: absolute;
     top: 60px;
     bottom: 0;
-    left: -18vw;
+    left: -330px;
     right: 0;
     margin: auto;
 
@@ -884,8 +884,7 @@ main h3{ /*最新消息 發文時間*/
         background-size: cover;
         background-repeat: no-repeat;
         height: 640px;
-        overflow: hidden;
-        
+        overflow: hidden;        
     }
 
     /* 海浪背景 */
@@ -897,7 +896,7 @@ main h3{ /*最新消息 發文時間*/
     
     /* 藍底區塊 */
     .block-blue {
-        width: 215px;
+        width: 52vw;
         height: 75px;
         position: absolute;
         top: -462px;
@@ -906,7 +905,7 @@ main h3{ /*最新消息 發文時間*/
 
     /* 白底區塊 */
     .block-white {
-        width: 225px;
+        width: 58vw;
         height: 507px;
         
         position: absolute;
