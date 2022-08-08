@@ -43,6 +43,6 @@ shoppcart.addEventListener("click",function(){
     alert("測試版尚未開通此功能，敬請期待!");
 });
 
-shoppcart_m.addEventListener("click",function(){
-    alert("測試版尚未開通此功能，敬請期待!");
-});
+// shoppcart_m.addEventListener("click",function(){
+//     alert("測試版尚未開通此功能，敬請期待!");
+// });

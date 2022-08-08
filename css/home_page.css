@@ -359,14 +359,25 @@ main h3{ /*最新消息 發文時間*/
     position:relative; /*wrapper-point定位用*/
 }
 
-.cut_fish h1{ /*視覺圖 標題*/
+/*視覺圖 標題 舊案*/
+/* .cut_fish h1{ 
     font-family: 'Noto Serif JP', serif;
     font-size: 100px;
     text-shadow: 2px 2px 5px white;
 
     position: absolute;
     top: 40px;
-    /* top: 18px; */
+
+    z-index: 10;
+} */
+
+/*視覺圖 標題*/
+.slogen {
+    display: block;
+    width: 93vw;
+
+    position: absolute;
+    top: 40px;
 
     z-index: 10;
 }
@@ -403,7 +414,6 @@ main h3{ /*最新消息 發文時間*/
 /*全魚*/
 .fish-all{
     display: block;
-    /* height: 345px;    */
     width: 773px;
 
     position: absolute;
@@ -834,10 +844,15 @@ main h3{ /*最新消息 發文時間*/
         height: 350px;
     }
 
-    /* 標語 */
-    .cut_fish h1 {
+    /* 視覺圖 標題 舊案 */
+    /* .cut_fish h1 {
         font-size: 34px;
         letter-spacing:5px;
+        top: 20px;
+    } */
+
+    /*視覺圖 標題*/
+    .slogen {
         top: 20px;
     }
 

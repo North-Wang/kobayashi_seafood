@@ -82,15 +82,93 @@ main{
 
 /*----------個別設定----------*/
 
+main{
+    overflow: hidden;
+}
+
+.wrapper {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+}
+
 section{
-    width: 800px;
-    height: 300px;
+    width: 500px;
+    height: 250px;
     background-color: aquamarine;
+
+    position: relative;
+
+    display: flex;
+
+    margin-bottom: 25px;
 }
 
 
 /*魚類照片*/
 section img{
     display: block;
-    width: 300px;
+    height: 225px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    z-index: 1;
+}
+
+/*魚類名稱*/
+section h2{
+    font-size: 65px;
+    font-family: 'Noto Serif JP';
+    letter-spacing: 1px;
+    /* font-weight: bold; */
+}
+
+/*商品文字內容*/
+section .text{
+    margin-top: 20px;
+    margin-left: 20px;
+
+    background-color: burlywood;
+}
+
+/*按鈕*/
+section button {
+    width: 115px;
+    height: 40px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 10px;
+
+    background-color: #5FBBFF;
+}
+
+/*----------商品各自微調--------*/
+.s1 {
+    margin-right: 10vw;
+}
+
+.s1 img{
+    height: 225px;
+    left: 10vw;
+}
+
+.s1 .text{}
+
+/*-----------------*/
+
+.s2 img{
+    height: 200px;
+    top: 90px;
+    left: -25vw;
+}
+
+.s2 .text {
+    text-align: right;
 }

@@ -183,12 +183,10 @@ setInterval(timeCounting,1000);
 
 /*-------------新聞 手機端反饋----------------*/
 
-let news = document.querySelectorAll(".news article");
+// let news = document.querySelectorAll(".news article");
 // console.log(news);
 
-news.addEventListener("touchstart",function(e){
-    alert("ok");
-})
+
 
 /*-------------視覺圖 視差滾動----------------*/
 
