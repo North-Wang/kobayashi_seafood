@@ -181,7 +181,7 @@ function timeCounting(){
 //倒數計時
 setInterval(timeCounting,1000);
 
-/*-------------視覺圖----------------*/
+/*-------------視覺圖 視差滾動----------------*/
 
 let cut_fish = document.querySelector(".cut_fish"); //視覺圖 父層
 let fish_left = document.querySelector(".fish-left");
@@ -211,7 +211,7 @@ if(window.innerWidth > 500){
 }else{
     document.addEventListener("scroll",function(e){ 
         let scroll_dis = Math.ceil(window.innerHeight + window.scrollY - cut_fish.offsetTop); //螢幕高度+滾動了距離-父層距離頂端的高度
-        console.log(scroll_dis); //目標在465~700
+        // console.log(scroll_dis); //目標在465~700
         // console.log(cut_fish.offsetHeight);   
         if(scroll_dis >= 465 && scroll_dis <= 700){
             // console.log(Math.ceil(window.innerHeight + window.scrollY - cut_fish.offsetTop) - 465);

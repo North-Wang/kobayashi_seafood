@@ -265,17 +265,17 @@ main h3{ /*最新消息 發文時間*/
 }
 
 /*新聞 遮罩*/
-.mask{ 
+.news .mask{ 
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.2;
+    opacity: 0.15;
 
     position: absolute;
     z-index: 2;
 }
 
-.mask:hover {
+.news .mask:hover {
     opacity: 0;
 }
 
@@ -284,7 +284,14 @@ main h3{ /*最新消息 發文時間*/
     height: 270px;
 }
 
-.news article>section{ /*統一news內文排版。同news分頁設定*/
+/*各新聞的連結*/
+.news article a{
+    width: 100%;
+    height: 100%;
+
+    z-index: 5; /* 權限要超過mask*/
+}
+.news article section{ /*統一news內文排版。同news分頁設定*/
     background-color: #E4F1FC;
     width: 100%;
     height: 200px;
@@ -306,7 +313,7 @@ main h3{ /*最新消息 發文時間*/
 }
 
 /*按鈕 more*/
-.news a{
+.news>a{
     display: block;
     width: 255px; /*長寬圓角和立即下訂相同*/
     height: 50px;
@@ -746,8 +753,13 @@ main h3{ /*最新消息 發文時間*/
         flex-direction: column;
     }
     /* 遮罩 */
-    .mask{
-        display: none;
+    .news .mask{
+        /* display: none; */
+        z-index: 6;
+    }
+
+    .news .mask:hover {
+        opacity: 0;
     }
 
     /* 統一news文章(和news分頁設定相同) */
@@ -764,7 +776,12 @@ main h3{ /*最新消息 發文時間*/
         margin-bottom: 25px;
     }
 
-    .news article>section{ 
+    .news article a{
+        display: flex;
+        z-index: 7;
+    }
+
+    .news article section{ 
         height: auto;
         display: flex;
         justify-content:start;
@@ -787,17 +804,19 @@ main h3{ /*最新消息 發文時間*/
         letter-spacing: 1.2px;
         line-height: 1.3;
 
-        margin-top: 0;
+        margin-top: 0px; /*消除原本設定*/
+        /* margin-left: 10px; */
     }
 
     /* 新聞時間 */
     .news section h3{
         font-size: 16px;
-        margin-top: auto;
+        /* margin-top: auto; */
         margin-bottom: 15px;
     }
 
-    .news a {
+    /*more*/
+    .news>a {
         width: 130px;
         height: 30px;
         line-height: 30px;
