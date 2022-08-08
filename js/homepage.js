@@ -14,7 +14,7 @@ let slide_last = wrap_slide.lastElementChild; //wrap_slide的最後一個子元�
 let slide_second = wrap_slide.querySelector(".mask"); //找到第二張slide
 // console.log(slide_second);
 
-    console.log("總共有" + slide_count + "張"); //印出slide張數
+    // console.log("總共有" + slide_count + "張"); //印出slide張數
 let s1 = document.querySelector("s1");
 let slide_wid = slide[1].clientWidth; //計算第一個.slide的寬度 
     // console.log(slide_wid); //第一張slide的寬度
@@ -29,7 +29,7 @@ function moveSlide_R(){
     // console.log("margin-left：" + wrap_slide.style.marginLeft); //印出指定距離
 
 /* 複製、刪除li */
-    console.log("現在的x為:" + x);
+    // console.log("現在的x為:" + x);
     wrap_slide.insertAdjacentHTML("beforeend",wrap_slide.firstElementChild.outerHTML); //複製第一張slide到最右邊    
     wrap_slide.removeChild(wrap_slide.firstElementChild); //刪除第一個li
 
@@ -72,7 +72,7 @@ function moveSlide_L(){
     wrap_slide.style.marginLeft = (slide_count - 3)*38.75 + 'rem'; //根據slide張數自動調整
 
     /* 複製、刪除li */
-    console.log("現在的x為:" + x);
+    // console.log("現在的x為:" + x);
     wrap_slide.insertAdjacentHTML("afterbegin",wrap_slide.lastElementChild.outerHTML); //複製最後一張slide到最左邊    
     wrap_slide.removeChild(wrap_slide.lastElementChild); //刪除最後一個li
 
@@ -92,7 +92,7 @@ function moveSlide_m_R(){
     wrap_slide.style.marginLeft = (slide_count - 3)*22.8 + 'rem'; //根據slide張數自動調整
 
     /* 複製、刪除li */
-    console.log("現在的x為:" + x);
+    // console.log("現在的x為:" + x);
     wrap_slide.insertAdjacentHTML("beforeend",wrap_slide.firstElementChild.outerHTML); //複製第一張slide到最右邊    
     wrap_slide.removeChild(wrap_slide.firstElementChild); //刪除第一個li
 
@@ -181,4 +181,28 @@ function timeCounting(){
 //倒數計時
 setInterval(timeCounting,1000);
 
+/*-------------視覺圖----------------*/
 
+let cut_fish = document.querySelector(".cut_fish"); //視覺圖 父層
+let knife = document.querySelector(".knife");
+let knife_h = knife.clientHeight;
+
+document.addEventListener("scroll",function(e){
+    // console.log(scrollY + "px"); //滾動了多少距離? 1200px時候刀子可以動 1394px停止
+    // console.log(knife_h); //.knife本身的高度
+    // console.log(cut_fish.clientHeight); //父層.cut-fish本身的高度
+    // console.log(cut_fish.offsetTop); //1480。定值。父層距離網頁頂部的距離
+    // console.log(knife.offsetTop); //knife距離父層的y距離。定值
+    // console.log(window.innerHeight); //螢幕高度 1080
+    // console.log( window.innerHeight + window.scrollY - cut_fish.offsetTop);
+    // console.log(window.scrollY); //873~1252
+
+    e.preventDefault();
+    let knife_dis = (window.innerHeight + window.scrollY - cut_fish.offsetTop); //745~1080
+    // console.log(knife_dis);
+    console.log(window.scrollY - cut_fish.offsetTop); //
+    if(window.scrollY > 875 && window.scrollY < 1252){
+        // knife.style.top = (knife_dis - cut_fish.offsetTop)*1.2 + "px";
+        //控制top數值從0~700
+    }
+})
