@@ -381,16 +381,16 @@ main h3{ /*最新消息 發文時間*/
 /*木盤*/
 .woodplate{ 
     display: block;
-    width: 650px;
+    width: 800px;
 
     position: absolute;
-    top: 0;
+    top: 60px;
     bottom: 0;
-    left: -280px;
+    left: -18vw;
     right: 0;
     margin: auto;
 
-    z-index: 4;
+    z-index: 4;    
 }
 
 /*全魚*/
@@ -409,11 +409,39 @@ main h3{ /*最新消息 發文時間*/
     z-index: 5;
 }
 
+/*半魚*/
+.fish-left{
+    display: block;
+    width: 65vw;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -26vw; 
+    margin: auto;
+
+    z-index: 6;
+}
+
+.fish-right{
+    display: block;
+    width: 65vw;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -26vw; 
+    margin: auto;
+
+    z-index: 6;
+}
+
 /*刀子 1920px*/ 
 .knife {
     display: block;
     width: 392px;
-    /* height: 437px; */
 
     position: absolute;
     top: 0;
@@ -803,6 +831,8 @@ main h3{ /*最新消息 發文時間*/
     /* 木盤 */
     .woodplate {
         width: 300px;
+        top: -42px;
+        left: -67vw;
     }
 
     /* 全魚 */
@@ -810,11 +840,23 @@ main h3{ /*最新消息 發文時間*/
         width: 90vw;
         left: -76vw;
     }
+    /*半魚*/
+    .fish-left {
+        width: 115vw;
+        top: -90px;
+        left: -83vw;
+    }
+    .fish-right {
+        width: 115vw;
+        top: -90px;
+        left: -83vw;
+    }
 
     /* 刀子 */
     .knife {
         width: 185px;
-        left: -115vw;
+        top: -75px;
+        left: -112vw;
     }
     /*---------品牌故事----------*/
 
