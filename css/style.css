@@ -391,7 +391,8 @@ footer ul:last-child a:hover {
 
     /* 手機版導覽列 */
     .nav-m {
-        width: 160px;
+        /* width: 160px; */
+        width: 100%;
         background-color: #151D20;
 
         /* display: flex; */
@@ -406,7 +407,7 @@ footer ul:last-child a:hover {
     }
 
     .nav-m li {
-        height: 40px;
+        height: 45px;
         line-height: 40px;
         text-align: center;
     }
@@ -414,18 +415,7 @@ footer ul:last-child a:hover {
     .nav-m li a{
         display: block;
         font-size: 16px;
-
-        margin-left: 42px;
-        margin-right: 30px;
-    }
-
-    /* 微調 hover底線寬度*/
-    .nav-m li:nth-of-type(4) a{
-        margin-right: 52px;
-    }
-    .nav-m li:nth-child(n+5) a{
-        margin-right: 74px;
-    }
+    }   
 
     /* Q&A */
     header .en {

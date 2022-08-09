@@ -161,11 +161,11 @@
                         <h4 class="alert">格式錯誤</h4>
 
                         <h3>手機<span class="must">*</span>：</h3>
-                        <input type="text" placeholder="請輸入聯絡電話">
+                        <input class="phonenum" type="text" placeholder="請輸入聯絡電話">
                         <h4 class="alert">格式錯誤</h4>
 
                         <h3>電子信箱<span class="must">*</span>：</h3>
-                        <input type="email" placeholder="請輸入您的電子信箱">
+                        <input class="email" type="email" placeholder="請輸入您的電子信箱">
                         <h4 class="alert">格式錯誤</h4>
 
                         <h3>郵寄地址<span class="must">*</span>：</h3>
@@ -239,7 +239,6 @@
             <!--提示訊息-->
             <div class="messa" style="display:none;">
                 <h3>付款成功</h3>
-
                 <div class="container">
                     <button class="text-join">
                         <a href="./register.html"><h3>加入會員 領取100元優惠券</h3></a>
@@ -249,7 +248,15 @@
                     </button> 
                 </div>                        
             </div>
-            
+
+            <!--錯誤訊息-->
+            <div class="alert-msg" style="display:none ;">
+                <h3>資料填寫不完整</h3>
+                <h3 class="alert-inner"></h3>
+                <button>
+                    <a href="#"><h3>確定</h3></a>
+                </button>
+            </div>            
         </main>
         
         <!-----頁尾----->

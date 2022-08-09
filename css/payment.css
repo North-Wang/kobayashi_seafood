@@ -502,16 +502,14 @@ main{
     color:white;
 }
 
-/*-----完成後 提示訊息-----*/
+/*-------------完成後 提示訊息------------*/
 
 .messa{
     width: 360px;
     height: 205px;
     background-color: #EEF5FF;
-
     box-shadow: 1px 1px 10px rgb(135, 135, 135);
     border-radius: 10px;
-
 
     display: flex;
     flex-direction: column;
@@ -582,6 +580,54 @@ main{
     color: white;
 }
 
+/*-------------有資訊填寫不完整------------*/
+
+.alert-msg {
+    width: 360px;
+    height: 150px;
+    background-color: #EEF5FF;
+    box-shadow: 1px 1px 10px rgb(135, 135, 135);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    z-index: 10;
+}
+
+.alert-msg .alert-inner {
+    margin-top: 0; /*取消原設*/
+    margin-bottom: 0; /*取消原設*/
+}
+.alert-msg button { /*統一 按鈕設計*/
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0px; /*清除預設邊框設定*/
+
+    margin-bottom: 15px;
+    background-color: #5FBBFF;
+}
+
+.alert-msg button:hover {
+    background-color: #1F5C89;
+}
+
+.alert-msg>h3 {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 22px;
+}
 /*-----------------------------------------------------------------*/
 
 @media screen and (max-width:420px) {
@@ -729,7 +775,7 @@ main{
     }
 
     /* 統一 表單尺寸 */
-    .wrapper2 input,
+    .wrapper2>input,
     .wrapper3>input { 
         width: 320px;    
         font-size: 18px;

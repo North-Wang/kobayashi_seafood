@@ -1,7 +1,7 @@
 /*付款成功 彈出訊息*/
-var submit = document.querySelector(".submit");
-var messa = document.querySelector(".messa");
-var mask0 = document.querySelector(".mask0");
+let submit = document.querySelector(".submit");
+let messa = document.querySelector(".messa");
+let mask0 = document.querySelector(".mask0");
 
 // submit.addEventListener("click",function(){
 //     if (messa.style.display === "none"){
@@ -14,6 +14,29 @@ function alert_msg(){
     messa.style.display = "block";
     mask0.style.display = "block";    
 }
+
+/*----------判斷表單填寫資料是否正確-----------*/
+
+let messa_alert = document.querySelector(".alert-msg"); //資料填寫不完全時，會瑱出的區塊元素
+let btn_msg_alert = document.querySelector(".alert-msg").lastElementChild; //找到"確定"按鈕
+
+//開啟 資料填寫不完全的錯誤訊息
+function alert_NG(){
+    if(messa_alert.style.display == "none"){
+        // console.log("開啟錯誤提醒");
+        messa_alert.style.display = "flex";
+    }
+}
+
+//點擊"確定"，能關掉彈出訊息
+btn_msg_alert.addEventListener("click", function(e){
+    if(messa_alert.style.display == "flex"){    
+        // console.log("關閉錯誤提醒");    
+        e.preventDefault();
+        messa_alert.style.display = "none";
+        masktop.style.display = "none";        
+    }
+})
 
 /*----------判斷表單填寫資料是否正確-----------*/
 
@@ -81,12 +104,13 @@ password_ck.addEventListener("blur",function(){
 //確認是否有欄位未填寫?
 submit.addEventListener("click",function(e){
     if( phonenum.classList.contains("ok") && email.classList.contains("ok")&& msg_ck.classList.contains("ok") && password.classList.contains("ok") && password_ck.classList.contains("ok")){
-        console.log("OK");
+        // console.log("OK");
         alert_msg(); 
     }else{
-        console.log("NG");
+        // console.log("NG");
         e.preventDefault();
-        alert("資料填寫不完整");
+        masktop.style.display = "block";
+        alert_NG(); //跳出錯誤訊息
     }
 });
 

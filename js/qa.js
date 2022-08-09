@@ -15,8 +15,8 @@
         }
 
         // console.log("ok");
-        // console.log(e.target);
-        if(e.target.classList.contains("fa-caret-down") == true){            
+        // console.log(e.target); 
+        if(e.target.closest("div").classList.contains("question") == true){            
             // console.log(this.style);
             e.target.closest("div").style.marginBottom = 0;
             let ans_el = e.target.closest("div").nextElementSibling;

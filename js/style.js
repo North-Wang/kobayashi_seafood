@@ -18,8 +18,6 @@ hamber.addEventListener("click", function(){
     }    
 });
 
-/* 點擊其他地方，也能關閉導覽列 */
-
 /*--------點擊其他地方也能關閉手機版導覽列-------*/
 
 masktop.addEventListener("click",function(){
@@ -58,12 +56,13 @@ search_m.addEventListener("click", function(){
 /*-------------點擊購物車-------------*/
 
 let shoppcart = document.querySelector(".fa-cart-shopping");
+let shoppcart_fa = shoppcart.closest("li");
 let shoppcart_m = document.querySelector(".cart-m");
 
-shoppcart.addEventListener("click",function(){
+shoppcart_fa.addEventListener("click",function(){
     alert("測試版尚未開通此功能，敬請期待!");
 });
 
-// shoppcart_m.addEventListener("click",function(){
-//     alert("測試版尚未開通此功能，敬請期待!");
-// });
+shoppcart_m.addEventListener("click",function(){
+    alert("測試版尚未開通此功能，敬請期待!");
+});
