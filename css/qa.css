@@ -184,4 +184,8 @@ main{
     .question h2 {
         letter-spacing: 0px;
     }
+
+    .ans-A {
+        padding-left: 31px;
+    }
 }
