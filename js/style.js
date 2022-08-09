@@ -3,14 +3,35 @@
 let hamber = document.querySelector(".fa-bars"); 
 let nav_m = document.querySelector(".nav-m");
 let search_m = document.querySelector(".search-m"); /* icon-搜尋 */
+let masktop = document.querySelector(".masktop"); /* main的大遮罩 */
 
-    /* 打開導覽列 */
+/* 打開導覽列 */
 hamber.addEventListener("click", function(){    
     if(nav_m.style.display == "flex"){
+        // console.log("關閉導覽列");
         nav_m.style.display = "none";
+        masktop.style.display = "none";
     }else{
+        // console.log("開啟導覽列");
         nav_m.style.display = "flex";
+        masktop.style.display = "block";
     }    
+});
+
+/* 點擊其他地方，也能關閉導覽列 */
+
+/*--------點擊其他地方也能關閉手機版導覽列-------*/
+
+masktop.addEventListener("click",function(){
+    if(nav_m.style.display == "flex"){
+        // console.log("關閉導覽列");
+        nav_m.style.display = "none";
+        masktop.style.display = "none";
+    }else{
+        // console.log("開啟導覽列");
+        nav_m.style.display = "flex";
+        masktop.style.display = "block";
+    }
 });
 
 /*-------------點擊搜尋icon 出現輸入欄-------------*/

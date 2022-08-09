@@ -795,6 +795,11 @@ main{
         margin-left: 10px;
     }
 
+    /* "信用卡付款" */
+    .visa>h3 {
+        margin-left: 7px;
+    }
+
     .icon-visa {
         height: 25px;
         
