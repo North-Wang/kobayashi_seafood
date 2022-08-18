@@ -18,7 +18,7 @@
         // console.log(e.target); 
         if(e.target.closest("div").classList.contains("question") == true){            
             // console.log(this.style);
-            e.target.closest("div").style.marginBottom = 0;
+            e.target.closest("div").style.marginBottom = "0";
             let ans_el = e.target.closest("div").nextElementSibling;
             ans_el.style.display = "flex";
         }

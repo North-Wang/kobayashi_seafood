@@ -85,7 +85,7 @@ let btn_msg_alert = document.querySelector(".alert-msg").lastElementChild; //找
 //開啟 資料填寫不完全的錯誤訊息
 function alert_NG(){
     if(messa_alert.style.display == "none"){
-        console.log("開啟錯誤提醒");
+        // console.log("開啟錯誤提醒");
         messa_alert.style.display = "flex";
     }
 }
@@ -93,7 +93,7 @@ function alert_NG(){
 //點擊"確定"，能關掉彈出訊息
 btn_msg_alert.addEventListener("click", function(e){
     if(messa_alert.style.display == "flex"){    
-        console.log("關閉錯誤提醒");    
+        // console.log("關閉錯誤提醒");    
         e.preventDefault();
         messa_alert.style.display = "none";
         masktop.style.display = "none";

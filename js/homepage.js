@@ -199,12 +199,12 @@ let knife = document.querySelector(".knife");
 window.addEventListener("load",function(){
     if(window.innerWidth > 500){
         document.addEventListener("scroll",function(e){
-            // console.log(scrollY + "px"); //滾動了多少距離? 
+            console.log("scrollY" + scrollY + "px"); //滾動了多少距離? 
             // console.log(knife_h); //.knife本身的高度
             // console.log(cut_fish.clientHeight); //父層.cut-fish本身的高度
-            // console.log(cut_fish.offsetTop); //1480。定值。父層距離網頁頂部的距離
+            console.log("cut_fish.offsetTop" + cut_fish.offsetTop); //1480。定值。父層距離網頁頂部的距離
             // console.log(knife.offsetTop); //knife距離父層的y距離。定值
-            // console.log(window.innerHeight); //螢幕可視範圍的高度
+            console.log("window.innerHeight：" + window.innerHeight); //螢幕可視範圍的高度
             let scroll_dis = Math.ceil(window.innerHeight + window.scrollY - cut_fish.offsetTop); //螢幕高度+滾動了距離-父層距離頂端的高度
             // console.log(scroll_dis); //目標在630~985       
         
@@ -215,6 +215,9 @@ window.addEventListener("load",function(){
                 knife.style.top = 0 + (scroll_dis - 630)*2.6 + "px"; //要扣掉scroll_dis的起始距離
                 fish_right.style.left = -26 + (10/(985-630))*(scroll_dis - 630) + "vw" //控制在-26vw~ -16vw
                 fish_left.style.left = -26 - (10/(985-630))*(scroll_dis - 630) + "vw" //控制在-26vw~ -16vw
+            }else if(scroll_dis < 630){
+                fish_right.style.left = "-26vw";
+                fish_left.style.left = "-26vw";
             }
         })
     }else{
@@ -227,6 +230,9 @@ window.addEventListener("load",function(){
                 knife.style.top = -75 + (scroll_dis - 465)*1.6 + "px"; //-75是knife top初始數值
                 fish_right.style.left = -83 + (20/(700-465))*(scroll_dis - 465) + "vw" //控制在-83vw~ -63vw
                 fish_left.style.left = -83 - (20/(700-465))*(scroll_dis - 465) + "vw" //控制在-83vw~ -103vw
+            }else if(scroll_dis < 465){
+                fish_right.style.left = "-83vw";
+                fish_left.style.left = "-83vw";
             }
         })
     };    
